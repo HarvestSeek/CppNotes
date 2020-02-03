@@ -42,7 +42,7 @@
 
     
       
-        <title>1.primitive type - Learning Notes of Cpp</title>
+        <title>4.array - Learning Notes of Cpp</title>
       
     
     
@@ -148,7 +148,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                1.primitive type
+                4.array
               
             </span>
           
@@ -260,59 +260,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        1.primitive type
-      </label>
-    
-    <a href="./" title="1.primitive type" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../1.1/" title="1.primitive type" class="md-nav__link">
       1.primitive type
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" title="1. 基本内置类型" class="md-nav__link">
-    1. 基本内置类型
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" title="2. 类型转换" class="md-nav__link">
-    2. 类型转换
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-literal" title="3. 字面值 (literal)" class="md-nav__link">
-    3. 字面值 (literal)
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -344,11 +296,66 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../1.4/" title="4.array" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        4.array
+      </label>
+    
+    <a href="./" title="4.array" class="md-nav__link md-nav__link--active">
       4.array
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1. 定义和初始化" class="md-nav__link">
+    1. 定义和初始化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" title="2. 指针与数组" class="md-nav__link">
+    2. 指针与数组
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" title="3. 指针与迭代器" class="md-nav__link">
+    3. 指针与迭代器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" title="4. 指针与下标" class="md-nav__link">
+    4. 指针与下标
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -484,22 +491,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" title="1. 基本内置类型" class="md-nav__link">
-    1. 基本内置类型
+  <a href="#1" title="1. 定义和初始化" class="md-nav__link">
+    1. 定义和初始化
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" title="2. 类型转换" class="md-nav__link">
-    2. 类型转换
+  <a href="#2" title="2. 指针与数组" class="md-nav__link">
+    2. 指针与数组
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-literal" title="3. 字面值 (literal)" class="md-nav__link">
-    3. 字面值 (literal)
+  <a href="#3" title="3. 指针与迭代器" class="md-nav__link">
+    3. 指针与迭代器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" title="4. 指针与下标" class="md-nav__link">
+    4. 指针与下标
   </a>
   
 </li>
@@ -521,76 +535,86 @@
               
                 
                 
-                  <h1>1.primitive type</h1>
+                  <h1>4.array</h1>
                 
                 <p><font face="思源黑体 CN">
 <font face="Consolas"></font></p>
-<h4 id="1">1. 基本内置类型</h4>
-<p>基本类型：<font face="Consolas">bool, char, short, int, long, long long, float, double, long double</font></br>
-扩展类型：</br>
-<font face="Consolas">wchar_t</font>： 宽字符，<font face="Consolas">16bit</font>，<font face="Consolas">char</font> 保证可以存放机器基本字符集的字符，<font face="Consolas">wchar_t</font> 保证可以存放机器最大扩展字符集中的字符。</br>
-<font face="Consolas">char16_t、char32_t</font>：分别为 <font face="Consolas">16bit、32bit</font>，为 <font face="Consolas">Unicode</font> 字符集服务。</p>
-<p>类型使用建议：
-<html> 
-<body>
-<ul style="margin-top:-17px;margin-bottom:10px;line-height:30px;">
-<li style="margin:1px 26px;">明确数值不为负，使用无符号类型；</li>
-<li style="margin:1px 26px;">算术表达式不要使用 <font face="Consolas">char</font> 和 <font face="Consolas">bool</font>，只在存放值时使用它们。因为 <font face="Consolas">char</font> 是否有符号视机器而定，如果需要小整数运算，则最好指明 <font face="Consolas">signed char/unsigned char</font>；</li>
-<li style="margin:1px 26px;">浮点数运算使用 <font face="Consolas">double</font>，<font face="Consolas">float</font> 可能大小不够且速度更慢。</li>
-</ul>
-</body>
-</html></p>
-<h4 id="2">2. 类型转换</h4>
-<p>注意隐式类型转换
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">unsigned</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">i2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">42</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i1</span> <span class="o">+</span> <span class="n">i2</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">// 4294967264</span>
-</pre></div>
-</td></tr></table></p>
-<h4 id="3-literal">3. 字面值 (<font face="Consolas">literal</font>)</h4>
-<p>整数：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">20</span> <span class="cm">/* dec */</span>   <span class="mo">024</span> <span class="cm">/* oct */</span>   <span class="mh">0x14</span> <span class="cm">/* hex */</span>
-</pre></div>
-</td></tr></table>
-<html> 
-<body>
-<ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
-<li style="margin:1px 26px;">十进制字面值类型是 <font face="Consolas">int、long、long long</font> 中能容纳且尺寸最小的那个；</li>
-<li style="margin:1px 26px;">八进制和十六进制是<font face="Consolas">int、uint、long、ulong、longlong、ulonglong</font> 中能容纳且尺寸最小的那个；</li>
-<li style="margin:1px 26px;">严格来说，十进制字面量不为负，负值的形式的含义是对字面量做负运算。</li>
-</ul>
-</body>
-</html>
-浮点：
-<div class="codehilite"><pre><span></span><span class="mf">3.14159</span>   <span class="mf">3.14159E0</span>   <span class="mf">0.</span>   <span class="mf">0e0</span>   <span class="mf">.001</span>
-</pre></div>
-&emsp;浮点字面值的默认类型为 <font face="Consolas">double</font>。</p>
-<p>字符：
+<h3 id="1">1. 定义和初始化</h3>
+<p>在 <font face="Consolas">C++</font> 中，数组的维度在编译时必须已知，维度必须是一个常量表达式。
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sc">&#39;a&#39;</span>              <span class="c1">// char literal</span>
-<span class="s">&quot;Hello World&quot;</span>    <span class="c1">// string literal</span>
-<span class="kt">char</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="s">&quot;my life is &quot;</span>
-          <span class="s">&quot;a long way.&quot;</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="k">constexpr</span> <span class="kt">unsigned</span> <span class="n">sz</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="n">sz</span><span class="p">];</span>
+<span class="n">string</span> <span class="n">bad</span><span class="p">[</span><span class="n">cnt</span><span class="p">];</span> <span class="c1">// 可能会编译不通过或产生其他问题</span>
 </pre></div>
 </td></tr></table>
-如果两个字符串仅由 空格/缩进/换行符 分隔，那么这两个字符串是一个整体。</p>
-<p>指定字面量的类型：
+列表初始化：</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">const</span> <span class="kt">unsigned</span> <span class="n">sz</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">ial</span><span class="p">[</span><span class="n">sz</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
+</pre></div>
+</td></tr></table>
+字符数组的特殊性：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">a1</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;C&#39;</span><span class="p">,</span> <span class="sc">&#39;+&#39;</span><span class="p">,</span> <span class="sc">&#39;+&#39;</span><span class="p">};</span>       <span class="c1">// 无空字符</span>
+<span class="kt">char</span> <span class="n">a2</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;C&#39;</span><span class="p">,</span> <span class="sc">&#39;+&#39;</span><span class="p">,</span> <span class="sc">&#39;+&#39;</span><span class="p">,</span> <span class="sc">&#39;\0&#39;</span><span class="p">};</span> <span class="c1">// 显式空字符</span>
+<span class="kt">char</span> <span class="n">a3</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;C++&quot;</span><span class="p">;</span>                 <span class="c1">// 自动添加空字符</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">a4</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;Daniel&quot;</span><span class="p">;</span>       <span class="c1">// ERROR</span>
+</pre></div>
+</td></tr></table>
+更加复杂的数组声明：
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sa">L</span><span class="sc">&#39;a&#39;</span>    <span class="c1">// wchar_t</span>
-<span class="sa">u8</span><span class="s">&quot;hi!&quot;</span> <span class="c1">// utf-8 string literal</span>
-<span class="mi">42ULL</span>   <span class="c1">// unsigned long long</span>
-<span class="mf">1E-3</span><span class="n">F</span>   <span class="c1">// float </span>
-<span class="mf">3.14</span><span class="n">L</span>   <span class="c1">// long double</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,};</span> 
+<span class="kt">int</span> <span class="o">*</span><span class="n">ptrs</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>             <span class="c1">// ptrs 是含有10个整形指针的数组</span>
+<span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">parray</span><span class="p">)[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">;</span>  <span class="c1">// parray 指向一个含有10个整数的数组</span>
+<span class="kt">int</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">arrref</span><span class="p">)[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">;</span>   <span class="c1">// arrref 引用一个含有10个整数的数组</span>
+<span class="kt">int</span> <span class="o">*</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arry</span><span class="p">)[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="n">ptrs</span><span class="p">;</span>   <span class="c1">// arry 是数组的引用，该数组含有10个指针</span>
+</pre></div>
+</td></tr></table>
+&emsp;默认情况下，类型修饰符从右向左依次绑定。对于 <kbd><font face="Consolas">ptrs</font></kbd> 来说，可以依次知道它是一个大小为 <font face="Consolas">10</font> 的数组、名字为 <font face="Consolas">ptrs</font>、存放类型为 <font face="Consolas">int</font> 的指针。</br>
+&emsp;对于 <kbd><font face="Consolas">parray</font></kbd>，由于括号的存在，需要从内向外解读。首先由 <font face="Consolas">*parray</font> 知道它是一个指针，然后依次知道它指向一个大小为 <font face="Consolas">10</font> 的数组、数组中类型为 <font face="Consolas">int</font>。对于 <kbd><font face="Consolas">arrref</font></kbd> 也是同理。</p>
+<p>&emsp;在使用数组下标时，常使用 <kbd><font face="Consolas">size_t</font></kbd> 类型。它是一种机器相关的无符号类型，它被设计的足够大以容纳内存中任意对象的大小。它定义在 <kbd><font face="Consolas">cstddef</font></kbd> 中，是 <font face="Consolas">C</font> 标准库 <kbd><font face="Consolas">stddef.h</font></kbd> 的 <font face="Consolas">C++</font> 版本。</p>
+<h3 id="2">2. 指针与数组</h3>
+<p>在用到数组名字的地方，编译器会自动将其替换为指向数组首元素的指针：
+<div class="codehilite"><pre><span></span><span class="n">string</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="n">nums</span><span class="p">;</span>  <span class="c1">// &lt;==&gt; p2 = &amp;nums[0]</span>
+</pre></div>
+当使用 <kbd><font face="Consolas">decltype</font></kbd> 关键字时，上述转换不会发生。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">ia</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+<span class="c1">// ia2 是一个整型指针，指向 ia 第一个元素</span>
+<span class="k">auto</span> <span class="nf">ia2</span><span class="p">(</span><span class="n">ia</span><span class="p">);</span> <span class="c1">// &lt;==&gt; auto ia2(&amp;ia[0])</span>
+<span class="c1">// ia3 是一个含有 10 个整数的数组</span>
+<span class="k">decltype</span><span class="p">(</span><span class="n">ia</span><span class="p">)</span> <span class="n">ia3</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
 </pre></div>
 </td></tr></table></p>
-<p></font></p>
+<h3 id="3">3. 指针与迭代器</h3>
+<p>&emsp;对迭代器的运算也适用于指针。尽管可以通过计算得到尾后指针，但易出错，<font face="Consolas">C++11</font> 在标准库中引入了 <kbd><font face="Consolas">begin</font></kbd> 和 <kbd><font face="Consolas">end</font></kbd> 函数。
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">pbeg</span> <span class="o">=</span> <span class="n">begin</span><span class="p">(</span><span class="n">arr</span><span class="p">),</span> <span class="o">*</span><span class="n">pend</span> <span class="o">=</span> <span class="n">end</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+</pre></div>
+指针相减的结果是一种名为 <kbd><font face="Consolas">ptrdiff_t</font></kbd> 的类型，和 <kbd><font face="Consolas">size_t</font></kbd> 定义在同一位置。需要注意的是，不同类型的指针的比较和相减没有意义。</p>
+<h3 id="4">4. 指针与下标</h3>
+<p>只要指针指向的是数组中的元素，就可以执行下标运算。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">ia</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">};</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ia</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>    <span class="c1">// = *(p + 1) = ia[3]</span>
+<span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">];</span>   <span class="c1">// ia[0]</span>
+</pre></div>
+</td></tr></table>
+标准库的下标运算必须是无符号类型，而内置的下标运算无此要求。
+</font></p>
                 
                   
                 
@@ -611,7 +635,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../color/" title="Color" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1.3/" title="3.type" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -620,19 +644,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Color
+                3.type
               </span>
             </div>
           </a>
         
         
-          <a href="../1.2/" title="2.variable" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../2/2.1/" title="1.xx" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2.variable
+                1.xx
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

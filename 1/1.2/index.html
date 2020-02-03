@@ -414,6 +414,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.4/" title="4.array" class="md-nav__link">
+      4.array
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -429,11 +441,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      II String and Vector
+      II Function
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        II String and Vector
+        II Function
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -444,8 +456,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2/2.1/" title="1.std::string" class="md-nav__link">
-      1.std::string
+    <a href="../../2/2.1/" title="1.xx" class="md-nav__link">
+      1.xx
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      III Sequence Container
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        III Sequence Container
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3/3.1/" title="1.sequence container" class="md-nav__link">
+      1.sequence container
     </a>
   </li>
 
@@ -456,8 +504,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2/2.2/" title="2.std::vector" class="md-nav__link">
-      2.std::vector
+    <a href="../../3/3.2/" title="2.std::string" class="md-nav__link">
+      2.std::string
     </a>
   </li>
 
@@ -468,8 +516,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2/2.3/" title="3.iterator" class="md-nav__link">
-      3.iterator
+    <a href="../../3/3.3/" title="3.std::vector" class="md-nav__link">
+      3.std::vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3/3.4/" title="4.iterator" class="md-nav__link">
+      4.iterator
     </a>
   </li>
 
@@ -719,7 +779,7 @@
 </pre></div>
 </td></tr></table></p>
 <h4 id="2-const">(2). <font face="Consolas">const</font> 与指针</h4>
-<p>&emsp;<kbd><font face="Consolas">*</font></kbd> 在 <font face="Consolas">const</font> 之后代表这是一个指向常量的指针，此时 <font face="Consolas">const</font> 限定的部分为“解引用”，即无法通过指针修改原对象的值。需要注意的是，<font face="Consolas">const</font> 对象只能被 <font face="Consolas">const</font> 的指针指向。
+<p>&emsp;<kbd><font face="Consolas">*</font></kbd> 在 <font face="Consolas">const</font> 之后代表这是一个指向常量的指针，从右向左解读，<font face="Consolas">const</font> 限定的部分为“解引用”，即无法通过指针修改原对象的值。需要注意的是，<font face="Consolas">const</font> 对象只能被 <font face="Consolas">const</font> 的指针指向。
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -733,10 +793,14 @@
 <span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">j1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">j</span><span class="p">;</span>
 </pre></div>
 </td></tr></table>
-&emsp;<kbd><font face="Consolas">*</font></kbd> 在 <font face="Consolas">const</font> 之前代表这是一个常量指针，此时 <font face="Consolas">const</font> 限定的部分为这个变量，即指针的值不可变，但指针可以指向常量或非常量。
+&emsp;<kbd><font face="Consolas">*</font></kbd> 在 <font face="Consolas">const</font> 之前代表这是一个常量指针，从右向左解读，此时 <font face="Consolas">const</font> 限定的部分为这个变量，即指针的值不可变，但指针可以指向常量或非常量。
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
 <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">i1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">comb</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
 </pre></div>
 </td></tr></table></p>
 <h4 id="3-const_1">(3). 顶层 <font face="Consolas">const</font></h4>
