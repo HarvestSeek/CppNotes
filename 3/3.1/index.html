@@ -770,7 +770,7 @@
 <h3 id="2">2. 容器的基本操作</h3>
 <h4 id="1_1">(1). 容器的定义和初始化</h4>
 <p><body>
-<table id="wab">
+<table id="wab" >
 <tr> <th colspan="2">initialization</th></tr>
 <tr class="noright">
     <td class="noright">C c;</td> <td>默认构造函数。如果 C 是 array，则按 c 中元素的默认方式初始化，否则 c 为空。</td>
@@ -779,7 +779,7 @@
     <td class="noright">C c1(c2);</br>C c1 = c2;</td> <td>c1 和 c2 必须是相同类型 (容器类型、元素类型)。对于 array，两者大小还必须相同。</td>
 </tr>
 <tr>
-    <td class="noright">C c{a, b, c...};</br>C c = {a, b, c...};</td> <td>列表中元素必须与 C 相容。</td>
+    <td class="noright" width="180">C c{a, b, c...};</br>C c = {a, b, c...};</td> <td>列表中元素必须与 C 相容。</td>
 </tr>
 <tr>
     <td class="noright">C c(b, e);</td> <td>c 初始化为迭代器指定范围内元素的拷贝。范围中元素类型必须与 C 相容。 array 不适用。</td>
@@ -791,8 +791,8 @@
     <td class="noright">C seq(n, t);</td> <td>n 个值为 t 的元素。array 不适用。</td>
 </tr>
 </table>
-</body>
-例：
+</body></p>
+<p>例：
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span> <span class="kt">char</span><span class="o">*&gt;</span> <span class="n">articles</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;an&quot;</span><span class="p">,</span> <span class="s">&quot;the&quot;</span><span class="p">};</span>
@@ -808,7 +808,7 @@
     <td class="noright">c1 = c2;</td> <td>将 c1 中的元素替换为 c2 中的元素的拷贝。c1 和 c2 的类型必须相同。</td>
 </tr>
 <tr class="noright">
-    <td class="noright">c = {a, b, c...};</td> <td>将 c1 替换为列表中元素的拷贝，array 不适用。</td>
+    <td class="noright" width="180">c = {a, b, c...};</td> <td>将 c1 替换为列表中元素的拷贝，array 不适用。</td>
 </tr>
 <tr>
     <td class="noright">swap(c1, c2);</br>c1.swap(c2);</td> <td>交换 c1 和 c2 中的元素，两者类型必须相同，通常比拷贝快得多。</td>
@@ -969,7 +969,7 @@
     <td class="noright">c.resize(n)</td> <td>调整 c 的大小为 n。若 n &lt; c.size()，则多出的元素被丢弃。若必须添加新元素，则必须进行值初始化。</td>
 </tr>
 <tr class="noright">
-    <td class="noright">c.resize(n, t)</td> <td>新添加元素初始化为值 t。</td>
+    <td class="noright" width="130">c.resize(n, t)</td> <td>新添加元素初始化为值 t。</td>
 </tr>
 </table>
 </body>
@@ -1023,7 +1023,7 @@
 </td></tr></table>
 
 <h4 id="eg-2-end"><font face="Consolas"><em>e.g.</em></font> ② 不要保存 <font face="Consolas">end</font></h4>
-<p>在添加/删除 <font face="Consolas" size=3>vector</font> 或 <font face="Consolas" size=3>string</font> 的元素，或在 <font face="Consolas" size=3>deque</font> 中某些位置添加/删除，尾后迭代器总是会失效。因此 <kbd><font face="Consolas" size=3>end()</font></kbd> 应该被反复调用，这也是 <font face="Consolas">C++</font> 标准库的 <kbd><font face="Consolas" size=3>end()</font></kbd> 很快的一部分原因。</p>
+<p>在添加/删除 <font face="Consolas" size=3>vector</font> 或 <font face="Consolas" size=3>string</font> 的元素，或在 <font face="Consolas" size=3>deque</font> 中某些位置添加/删除，尾后迭代器总是会失效。因此 <kbd><font face="Consolas">end()</font></kbd> 应该被反复调用，这也是 <font face="Consolas">C++</font> 标准库的 <kbd><font face="Consolas">end()</font></kbd> 很快的一部分原因。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
