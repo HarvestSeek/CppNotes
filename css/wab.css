@@ -55,6 +55,12 @@
 {
 	border-right: #ffffff 1px hidden
 }
+
+#wab th.sub
+{
+	background-color: #e8e8e8;
+	font-size: 13px;
+}
   
 #wab td:hover 
 {
