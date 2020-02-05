@@ -771,7 +771,7 @@
 <h4 id="2_2">(2). 关联容器定义类型</h4>
 <p><body>
 <table id="wab">
-<tr> <th colspan="2">type of associative containers</th></tr>
+<tr> <th colspan="2">type of elements</th></tr>
 <tr class="noright">
     <td class="noright">key_type</td> <td>容器的关键字类型。</td> 
 </tr>
@@ -786,7 +786,7 @@
 <h4 id="3_1">(3). 插入元素</h4>
 <p><body>
 <table id="wab">
-<tr> <th colspan="2">type of associative containers</th></tr>
+<tr> <th colspan="2">insert</th></tr>
 <tr class="noright">
     <td class="noright">c.insert(v)</br>c.emplace(<em>args</em>)</td> <td>v 是 value_type，返回一个 pair，包括指定元素的迭代器和插入是否成功的布尔值。</td> 
 </tr>
@@ -906,7 +906,7 @@
     <td class="noright">c.max_loat_factor()</td> <td>c 试图维护的每个桶的平均元素数量，返回 float</td> 
 </tr>
 <tr class="noright">
-    <td class="noright">c.rehash(n)</td> <td>重组存储，使得 bucket_count &gt;= n &amp;&amp; bucket_count &gt; size / max_load_factor</td> 
+    <td class="noright">c.rehash(n)</td> <td>重组存储，使得 bucket_count</font> <font face="思源黑体 CN">&gt;= n &amp;&amp; bucket_count</font> <font face="思源黑体 CN">&gt; size</font> <font face="思源黑体 CN">/</font> <font face="思源黑体 CN">max_load_factor</td> 
 </tr>
 <tr class="noright">
     <td class="noright">c.reserve(n)</td> <td>重组存储，使得 c 可以保存 n 个元素且不必 rehash</td> 
