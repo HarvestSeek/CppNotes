@@ -42,7 +42,7 @@
 
     
       
-        <title>5.std::string - Learning Notes of Cpp</title>
+        <title>1.iterator - Learning Notes of Cpp</title>
       
     
     
@@ -75,7 +75,7 @@
     
       <link rel="stylesheet" href="../../css/wab.css">
     
-      <link rel="stylesheet" href="../../css/font.css">
+      <link rel="stylesheet" href="../../css/ifont.css">
     
       <link rel="stylesheet" href="../../css/ktblock.css">
     
@@ -130,7 +130,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#1" tabindex="1" class="md-skip">
+      <a href="#1-begin-end" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -156,7 +156,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                5.std::string
+                1.iterator
               
             </span>
           
@@ -376,54 +376,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../3.0/" title="1.basic operations of container" class="md-nav__link">
-      1.basic operations of container
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../3.1/" title="2.sequential container" class="md-nav__link">
-      2.sequential container
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../3.2/" title="3.std::vector" class="md-nav__link">
-      3.std::vector
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../3.3/" title="4.iterator" class="md-nav__link">
-      4.iterator
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -433,11 +385,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        5.std::string
+        1.iterator
       </label>
     
-    <a href="./" title="5.std::string" class="md-nav__link md-nav__link--active">
-      5.std::string
+    <a href="./" title="1.iterator" class="md-nav__link md-nav__link--active">
+      1.iterator
     </a>
     
       
@@ -449,49 +401,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" title="1. 定义与初始化" class="md-nav__link">
-    1. 定义与初始化
+  <a href="#1-begin-end" title="1. begin 和 end" class="md-nav__link">
+    1. begin 和 end
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" title="2. 操作" class="md-nav__link">
-    2. 操作
+  <a href="#2" title="2. 迭代器操作" class="md-nav__link">
+    2. 迭代器操作
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" title="(1). 读写" class="md-nav__link">
-    (1). 读写
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-stringsize_type" title="(2). string::size_type" class="md-nav__link">
-    (2). string::size_type
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" title="(3). 相加" class="md-nav__link">
-    (3). 相加
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3_1" title="3. 处理字符" class="md-nav__link">
-    3. 处理字符
+  <a href="#3" title="3. 迭代器运算" class="md-nav__link">
+    3. 迭代器运算
   </a>
   
 </li>
@@ -504,6 +429,54 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2/" title="2.std::vector" class="md-nav__link">
+      2.std::vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3/" title="3.std::string" class="md-nav__link">
+      3.std::string
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.0/" title="4.basic operations of container" class="md-nav__link">
+      4.basic operations of container
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.1/" title="5.sequential container" class="md-nav__link">
+      5.sequential container
+    </a>
   </li>
 
         
@@ -627,49 +600,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" title="1. 定义与初始化" class="md-nav__link">
-    1. 定义与初始化
+  <a href="#1-begin-end" title="1. begin 和 end" class="md-nav__link">
+    1. begin 和 end
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" title="2. 操作" class="md-nav__link">
-    2. 操作
+  <a href="#2" title="2. 迭代器操作" class="md-nav__link">
+    2. 迭代器操作
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" title="(1). 读写" class="md-nav__link">
-    (1). 读写
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-stringsize_type" title="(2). string::size_type" class="md-nav__link">
-    (2). string::size_type
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" title="(3). 相加" class="md-nav__link">
-    (3). 相加
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3_1" title="3. 处理字符" class="md-nav__link">
-    3. 处理字符
+  <a href="#3" title="3. 迭代器运算" class="md-nav__link">
+    3. 迭代器运算
   </a>
   
 </li>
@@ -691,164 +637,84 @@
               
                 
                 
-                  <h1>5.std::string</h1>
+                  <h1>1.iterator</h1>
                 
-                <p><font face="思源黑体 CN"></p>
-<h3 id="1">1. 定义与初始化</h3>
-<p><body>
-<table id="wab">
-<tr> <th colspan="2">ways of initializing a string</th></tr>
-<tr class="noright">
-    <td class="noright">string s1;</td> <td>默认初始化，s1 是一个空串</td>
-</tr>
-<tr class="noright">
-    <td class="noright">string s2(s1);</td> <td>s2 是 s1 的一个副本</td>
-</tr>
-<tr>
-    <td class="noright">string s2 = s1;</td> <td>等价于 s2(s1)</td>
-</tr>
-<tr>
-    <td class="noright">string s3("value");</td> <td>s3 是除了 "value" 最后的空字符外的副本</td>
-</tr>
-<tr>
-    <td class="noright">string s3 = "value";</td> <td>等价于 s3("value")</td>
-</tr>
-<tr>
-    <td class="noright">string s4(n, 'c');</td> <td>连续 n 个字符 'c'</td>
-</tr>
-</table>
-</body></p>
-<p>通过等号进行的初始化为拷贝初始化，编译器把等号右侧的值拷贝到新创建的对象中。如果不使用等号，则执行的是直接初始化。</p>
-<h3 id="2">2. 操作</h3>
-<p><body>
-<table id="wab">
-<tr> <th colspan="2">operations of string</th></tr>
-<tr class="noright">
-    <td class="noright">os &lt;&lt; s</td>
-    <td>将 s 写入输出流，返回 os</td>
-</tr>
-<tr class="noright">
-    <td class="noright">is &lt;&lt; s</td>
-    <td>从 is 中读取字符串赋给 s，字符串以空白分隔，返回 is</td>
-</tr>
-<tr>
-    <td class="noright">getline(is, s)</td>
-    <td>从 is 中读取一行赋给 s，返回 is</td>
-</tr>
-<tr>
-    <td class="noright">s.empty()</td>
-    <td>true/false</td>
-</tr>
-<tr>
-    <td class="noright">s[n]</td>
-    <td>返回 s 中第 n 个字符的引用</td>
-</tr>
-<tr>
-    <td class="noright">s1 + s2</td>
-    <td>连接</td>
-</tr>
-<tr>
-    <td class="noright">s1 = s2</td>
-    <td>用 s2 的副本代替 s1 中的内容</td>
-</tr>
-<tr>
-    <td class="noright">s1 == s2</td>
-    <td>保存的字符完全一样，则相等；大小写敏感</td>
-</tr>
-<tr>
-    <td class="noright">&gt;, &gt;=, &lt;, &lt;=</td>
-    <td>(第一对相异字符) 字典序比较，大小写敏感</td>
-</tr>
-</table>
-</body></p>
-<h4 id="1_1">(1). 读写</h4>
-<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">string</span> <span class="n">s</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="n">string</span> <span class="n">line</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span> <span class="n">line</span><span class="p">))</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">line</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">line</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-循环读取，直到读取到流结束符。在 <font face="Consolas">Windows</font> 下为 <font face="Consolas">Ctrl+Z</font>。</p>
-<h4 id="2-stringsize_type">(2). <font face="Consolas">string::size_type</font></h4>
-<p>&emsp;<font face="Consolas">string</font> 等标准库都定义了配套的类型，体现了机器无关的特性。作为 <font face="Consolas">s.size()</font> 的返回类型，<font face="Consolas">string::size_type</font> 是一个无符号类型且足够放下任何 <font face="Consolas">string</font> 对象的大小。在 <font face="Consolas">C++11</font> 后，可以通过 <font face="Consolas">auto</font> 和 <font face="Consolas">decltype</font> 进行类型推断。</p>
-<h4 id="3">(3). 相加</h4>
-<p>标准库支持字符字面量和字符串字面量转换成 <font face="Consolas">string</font> 对象。
+                <p><font class="generalcy">
+<font face="Consolas"></font></p>
+<h3 id="1-begin-end">1. <font face="Consolas">begin</font> 和 <font face="Consolas">end</font></h3>
+<p>在 <font face="Consolas">C++</font> 中，和其他语言不同的是，迭代器是容器内部的成员。其基本用法为：
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;hello&quot;</span><span class="p">,</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">&quot;world&quot;</span><span class="p">;</span>
-<span class="n">string</span> <span class="n">s3</span> <span class="o">=</span> <span class="n">s1</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">s2</span> <span class="o">+</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-
-<span class="n">string</span> <span class="n">s4</span> <span class="o">=</span> <span class="s">&quot;hello&quot;</span> <span class="o">+</span> <span class="s">&quot;,&quot;</span> <span class="o">+</span> <span class="n">s2</span><span class="p">;</span> <span class="c1">// ERROR</span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> 
+    <span class="o">*</span><span class="n">it</span> <span class="o">=</span> <span class="n">toupper</span><span class="p">(</span><span class="o">*</span><span class="n">it</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></p>
-<h3 id="3_1">3. 处理字符</h3>
-<p>在 <kbd><font face="Consolas">cctype</font></kbd> 头文件中定义了一组处理字符的函数：</p>
+<p>一般来说，迭代器的类型不被在意。实际上，<cs>begin()</cs> 和 <cs>end()</cs> 返回的具体类型由对象是否是常量决定。</p>
 <p><body>
 <table id="wab">
-<tr> <th colspan="2">functions in cctype</th></tr>
+<tr> <th colspan="2">return type of iterator (&lt;TypeName&gt;::%s)</th></tr>
 <tr class="noright">
-    <td class="noright">isalnum(c)</td>
-    <td>true: c 是字母或数字</td>
+    <td class="noright">begin(), end()</td> <td>iterator / const_iterator</td>
+</tr>
+<tr class="noright">
+    <td class="noright">cbegin(), cend()/td&gt; <td>const_iterator</td>
 </tr>
 <tr>
-    <td class="noright">isalpha(c)</td>
-    <td>true: c 是字母</td>
+    <td class="noright">rbegin(), rend()</td> <td>reverse_iterator / const_reverse_iterator</td>
 </tr>
 <tr>
-    <td class="noright">iscntrl(c)</td>
-    <td>true: c 是控制字符</td>
-</tr>
-<tr>
-    <td class="noright">isdigit(c)</td>
-    <td>true: c 是数字</td>
-</tr>
-<tr>
-    <td class="noright">isgraph(c)</td>
-    <td>true: c 不是空格但可打印</td>
-</tr>
-<tr>
-    <td class="noright">islower(c) / issuper(c)</td>
-    <td>true: c 是小/大写字母</td>
-</tr>
-<tr>
-    <td class="noright">isprint(c)</td>
-    <td>true: c 是可打印字符 (c 是空格或 c 具有可视化形式)</td>
-</tr>
-<tr>
-    <td class="noright">ispunct(c)</td>
-    <td>true: c 是标点符号</td>
-</tr>
-<tr>
-    <td class="noright">isspace(c)</td>
-    <td>true: c 是空格</td>
-</tr>
-<tr>
-    <td class="noright">isxdigit(c)</td>
-    <td>true: c 是十六进制数字</td>
-</tr>
-<tr>
-    <td class="noright">tolower(c) / toupper(c)</td>
-    <td>转换</td>
+    <td class="noright">crbegin(), crend()</td> <td>const_reverse_iterator</td>
 </tr>
 </table>
 </body></p>
-<p>例:
+<h3 id="2">2. 迭代器操作</h3>
+<p><body>
+<table id="wab">
+<tr> <th colspan="2">operators of iterator in std containers</th></tr>
+<tr class="noright">
+    <td class="noright">*iter</td> <td>返回迭代器 iter 所指元素的引用</td>
+</tr>
+<tr class="noright">
+    <td class="noright">iter-&gt;mem</td> <td>解引用 iter 并获取该元素名为 mem 的成员，等价于 (*iter).mem</td>
+</tr>
+<tr>
+    <td class="noright">++iter / --iter</td> <td>移动</td>
+</tr>
+<tr>
+    <td class="noright">iter1 == iter2</td> <td>两迭代器指向同一个元素 或 它们是同一个容器的 off-the-end iterator，则相等</td>
+</tr>
+</table>
+</body></p>
+<p><html> 
+<body>
+<ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 6px;"><font face="Consolas">C++</font> 中常使用 <font face="Consolas">!=</font> 判断循环条件，因为它兼容大多数标准库类；</li>
+<li style="margin:1px 6px;">容器的某些增删元素的操作可能会使迭代器失效。</li>
+</ul>
+</body>
+</html></p>
+<h3 id="3">3. 迭代器运算</h3>
+<p><kbd><font face="Consolas">string</font></kbd> 和 <kbd><font face="Consolas">vector</font></kbd> 的迭代器支持更多的操作符，这些运算被称为迭代器运算 (<font face="Calibri" size=3>iterator arithmetic</font>)。</p>
+<p><body>
+<table id="wab">
+<tr> <th colspan="2">operators of iterator in std containers</th></tr>
+<tr class="noright">
+    <td class="noright">iter + n / iter - n</td> <td>移动</td>
+</tr>
+<tr class="noright">
+    <td class="noright">iter += n / iter -= n</td> <td>复合赋值</td>
+</tr>
+<tr>
+    <td class="noright">iter1 - iter2</td> <td>两迭代器之间的距离，参与运算的两个迭代器必须属于同一个容器</td>
+</tr>
+<tr>
+    <td class="noright">&gt;, &gt;=, &lt;, &lt;=</td> <td>参与运算的两个迭代器必须属于同一个容器</td>
+</tr>
+</table>
+</body>
+其中两迭代器相减得到的类型是 <kbd><font face="Consolas">different_type</font></kbd>，是一个有符号整数，在 <kbd><font face="Consolas">string</font></kbd> 和 <kbd><font face="Consolas">vector</font></kbd> 中均被定义。</p>
+<p>例：
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -856,17 +722,18 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
-    <span class="k">decltype</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="n">punct_cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">c</span> <span class="p">:</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">ispunct</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> 
-            <span class="n">punct_cnt</span><span class="o">++</span><span class="p">;</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="n">toupper</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">punct_cnt</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">auto</span> <span class="n">l</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">r</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="k">auto</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">mid</span> <span class="o">!=</span> <span class="n">r</span> <span class="o">&amp;&amp;</span> <span class="o">*</span><span class="n">mid</span> <span class="o">!=</span> <span class="n">dest</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">dest</span> <span class="o">&lt;</span> <span class="o">*</span><span class="n">mid</span><span class="p">)</span> 
+        <span class="n">r</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
-需要注意的是，必须通过引用改变大小写。
 </font></p>
                 
                   
@@ -888,7 +755,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../3.3/" title="4.iterator" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../2/2.1/" title="1.parameters and returns" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -897,19 +764,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                4.iterator
+                1.parameters and returns
               </span>
             </div>
           </a>
         
         
-          <a href="../3.5/" title="6.associative container" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../2/" title="2.std::vector" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                6.associative container
+                2.std::vector
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

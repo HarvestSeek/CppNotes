@@ -42,7 +42,7 @@
 
     
       
-        <title>4.iterator - Learning Notes of Cpp</title>
+        <title>2.std::vector - Learning Notes of Cpp</title>
       
     
     
@@ -75,7 +75,7 @@
     
       <link rel="stylesheet" href="../../css/wab.css">
     
-      <link rel="stylesheet" href="../../css/font.css">
+      <link rel="stylesheet" href="../../css/ifont.css">
     
       <link rel="stylesheet" href="../../css/ktblock.css">
     
@@ -130,7 +130,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#1-begin-end" tabindex="1" class="md-skip">
+      <a href="#1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -156,7 +156,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                4.iterator
+                2.std::vector
               
             </span>
           
@@ -378,32 +378,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../3.0/" title="1.basic operations of container" class="md-nav__link">
-      1.basic operations of container
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../3.1/" title="2.sequential container" class="md-nav__link">
-      2.sequential container
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../3.2/" title="3.std::vector" class="md-nav__link">
-      3.std::vector
+    <a href="../1/" title="1.iterator" class="md-nav__link">
+      1.iterator
     </a>
   </li>
 
@@ -421,11 +397,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        4.iterator
+        2.std::vector
       </label>
     
-    <a href="./" title="4.iterator" class="md-nav__link md-nav__link--active">
-      4.iterator
+    <a href="./" title="2.std::vector" class="md-nav__link md-nav__link--active">
+      2.std::vector
     </a>
     
       
@@ -437,22 +413,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-begin-end" title="1. begin 和 end" class="md-nav__link">
-    1. begin 和 end
+  <a href="#1" title="1. 定义与初始化" class="md-nav__link">
+    1. 定义与初始化
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" title="2. 迭代器操作" class="md-nav__link">
-    2. 迭代器操作
+  <a href="#2" title="2. 操作" class="md-nav__link">
+    2. 操作
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" title="3. 迭代器运算" class="md-nav__link">
-    3. 迭代器运算
+  <a href="#3-vector" title="3. Vector 内存分配" class="md-nav__link">
+    3. Vector 内存分配
   </a>
   
 </li>
@@ -474,8 +450,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../3.4/" title="5.std::string" class="md-nav__link">
-      5.std::string
+    <a href="../3/" title="3.std::string" class="md-nav__link">
+      3.std::string
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.0/" title="4.basic operations of container" class="md-nav__link">
+      4.basic operations of container
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.1/" title="5.sequential container" class="md-nav__link">
+      5.sequential container
     </a>
   </li>
 
@@ -600,22 +600,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-begin-end" title="1. begin 和 end" class="md-nav__link">
-    1. begin 和 end
+  <a href="#1" title="1. 定义与初始化" class="md-nav__link">
+    1. 定义与初始化
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" title="2. 迭代器操作" class="md-nav__link">
-    2. 迭代器操作
+  <a href="#2" title="2. 操作" class="md-nav__link">
+    2. 操作
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" title="3. 迭代器运算" class="md-nav__link">
-    3. 迭代器运算
+  <a href="#3-vector" title="3. Vector 内存分配" class="md-nav__link">
+    3. Vector 内存分配
   </a>
   
 </li>
@@ -637,88 +637,96 @@
               
                 
                 
-                  <h1>4.iterator</h1>
+                  <h1>2.std::vector</h1>
                 
-                <p><font face="思源黑体 CN">
+                <p><font face="cycn">
 <font face="Consolas"></font></p>
-<h3 id="1-begin-end">1. <font face="Consolas">begin</font> 和 <font face="Consolas">end</font></h3>
-<p>在 <font face="Consolas">C++</font> 中，和其他语言不同的是，迭代器是容器内部的成员。其基本用法为：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">);</span>
-<span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> 
-    <span class="o">*</span><span class="n">it</span> <span class="o">=</span> <span class="n">toupper</span><span class="p">(</span><span class="o">*</span><span class="n">it</span><span class="p">);</span>
-</pre></div>
-</td></tr></table>
-其中 <kbd><font face="Consolas">begin</font></kbd> 返回指向第一个元素的迭代器，<kbd><font face="Consolas">end</font></kbd> 返回指向尾元素的下一个位置的迭代器。</br>
-&emsp;一般来说，迭代器的类型不被在意。实际上，<kbd><font face="Consolas">begin</font></kbd> 和 <kbd><font face="Consolas">end</font></kbd> 返回的具体类型由对象是否是常量决定。如果是常量则返回 <kbd><font face="Consolas">vector&lt;int&gt;::const_iterator</font></kbd>，否则为 <kbd><font face="Consolas">vertor&lt;int&gt;::iterator</font></kbd>。如果希望对于非常量对象设置通过迭代器只读，则可以使用 <font face="Consolas">C++11</font> 引入的函数 <kbd><font face="Consolas">cbegin</font></kbd> 和 <kbd><font face="Consolas">cend</font></kbd>。</p>
-<h3 id="2">2. 迭代器操作</h3>
+<h3 id="1">1. 定义与初始化</h3>
+<p><font face="Consolas">C++</font> 中既有类模板，又有函数模板，其中 <font face="Consolas">vector</font> 是一个类模板。</p>
 <p><body>
 <table id="wab">
-<tr> <th colspan="2">operators of iterator in std containers</th></tr>
+<tr> <th colspan="2">ways of initializing a vector</th></tr>
 <tr class="noright">
-    <td class="noright">*iter</td> <td>返回迭代器 iter 所指元素的引用</td>
+    <td class="noright">vector&lt;T&gt; v1;</td> <td>默认初始化，空 vector</td>
 </tr>
 <tr class="noright">
-    <td class="noright">iter-&gt;mem</td> <td>解引用 iter 并获取该元素名为 mem 的成员，等价于 (*iter).mem</td>
+    <td class="noright">vector&lt;T&gt; v2(v1);</td> <td>v2 包含 v1 中所有的副本，两者类型必须相同</td>
 </tr>
 <tr>
-    <td class="noright">++iter / --iter</td> <td>移动</td>
+    <td class="noright">vector&lt;T&gt; v2 = v1;</td> <td>等价于 v2(v1)</td>
 </tr>
 <tr>
-    <td class="noright">iter1 == iter2</td> <td>两迭代器指向同一个元素 或 它们是同一个容器的 off-the-end iterator，则相等</td>
+    <td class="noright">vector&lt;T&gt; v3(n, val);</td> <td>包含 n 个元素，每个的值为 val</td>
+</tr>
+<tr>
+    <td class="noright">vector&lt;T&gt; v4(n);</td> <td>包含 n 个执行了值初始化的对象，int 自动设为 0，如果是类则由类默认初始化</td>
+</tr>
+<tr>
+    <td class="noright">vector&lt;T&gt; v5{a, b, c, ...}</td> <td>按照花括号中的值初始化</td>
+</tr>
+<tr>
+    <td class="noright">vector&lt;T&gt; v5 = {a, b, c, ...}</td> <td>与上面的情况等价</td>
 </tr>
 </table>
 </body></p>
-<p><html> 
+<h3 id="2">2. 操作</h3>
+<p><body>
+<table id="wab">
+<tr> <th colspan="2">operations of vector</th></tr>
+<tr class="noright">
+    <td class="noright">v.empty()</td> <td>是否为空</td>
+</tr>
+<tr class="noright">
+    <td class="noright">v.size()</td> <td>元素个数</td>
+</tr>
+<tr>
+    <td class="noright">v.push_back(t)</td> <td>尾端添加元素</td>
+</tr>
+<tr>
+    <td class="noright">v[n]</td> <td>取 v 中第 n 个位置上的元素的引用</td>
+</tr>
+<tr>
+    <td class="noright">v1 = v2</td> <td>用 v2 中的元素拷贝替换 v1</td>
+</tr>
+<tr>
+    <td class="noright">v1 = {a, b, c, ...}</td> <td>用列表中的元素拷贝替换</td>
+</tr>
+<tr>
+    <td class="noright">v1 == v2</td> <td>true: 当且仅当元素数量相同且对应位置的元素值相同 (元素可比较)</td>
+</tr>
+<tr>
+    <td class="noright">&gt;, &gt;=, &lt;, &lt;=</td> <td>字典序比较</td>
+</tr>
+</table>
+</body></p>
+<p>需要注意以下几点：
+<html> 
 <body>
 <ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
-<li style="margin:1px 6px;"><font face="Consolas">C++</font> 中常使用 <font face="Consolas">!=</font> 判断循环条件，因为它兼容大多数标准库类；</li>
-<li style="margin:1px 6px;">容器的某些增删元素的操作可能会使迭代器失效。</li>
+<li style="margin:1px 26px;">不能再 <font face="Consolas">for-each</font> 循环中添加或删除元素，因为它预存了容器的大小；</li>
+<li style="margin:1px 26px;">访问 <font face="Consolas">size_type</font> 需正确指明类型，如 <kbd><font face="Consolas">vector&lt;int&gt;::size_type</font></kbd>；</li>
+<li style="margin:1px 26px;">不能通过下标添加未开辟空间的元素。</li>
 </ul>
 </body>
 </html></p>
-<h3 id="3">3. 迭代器运算</h3>
-<p><kbd><font face="Consolas">string</font></kbd> 和 <kbd><font face="Consolas">vector</font></kbd> 的迭代器支持更多的操作符，这些运算被称为迭代器运算 (<font face="Calibri" size=3>iterator arithmetic</font>)。</p>
+<h3 id="3-vector">3. <font face="Consolas">Vector</font> 内存分配</h3>
+<p>&emsp;为了支持快速随机访问，<font face="Consolas">vector</font> 对象存储在一块连续的地址空间中。随着容器大小的不断改变，其地址空间也要重新分配，以下接口体现了这个特性。</p>
 <p><body>
 <table id="wab">
-<tr> <th colspan="2">operators of iterator in std containers</th></tr>
+<tr> <th colspan="2">manage the size of container</th></tr>
 <tr class="noright">
-    <td class="noright">iter + n / iter - n</td> <td>移动</td>
+    <td class="noright">c.capacity()</td> <td>不重新分配内存的话，可以保存多少元素</td>
 </tr>
 <tr class="noright">
-    <td class="noright">iter += n / iter -= n</td> <td>复合赋值</td>
+    <td class="noright">c.reserve(n)</td> <td>分配至少能容纳 n 个元素的内存空间</td>
 </tr>
 <tr>
-    <td class="noright">iter1 - iter2</td> <td>两迭代器之间的距离，参与运算的两个迭代器必须属于同一个容器</td>
-</tr>
-<tr>
-    <td class="noright">&gt;, &gt;=, &lt;, &lt;=</td> <td>参与运算的两个迭代器必须属于同一个容器</td>
+    <td class="noright">c.shrink_to_left()</td> <td>将 capacity() 减少为与 size() 等同的大小</td>
 </tr>
 </table>
-</body>
-其中两迭代器相减得到的类型是 <kbd><font face="Consolas">different_type</font></kbd>，是一个有符号整数，在 <kbd><font face="Consolas">string</font></kbd> 和 <kbd><font face="Consolas">vector</font></kbd> 中均被定义。</p>
-<p>例：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">auto</span> <span class="n">l</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">r</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
-<span class="k">auto</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">mid</span> <span class="o">!=</span> <span class="n">r</span> <span class="o">&amp;&amp;</span> <span class="o">*</span><span class="n">mid</span> <span class="o">!=</span> <span class="n">dest</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">dest</span> <span class="o">&lt;</span> <span class="o">*</span><span class="n">mid</span><span class="p">)</span> 
-        <span class="n">r</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
-    <span class="k">else</span>
-        <span class="n">l</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-</font></p>
+</body></p>
+<p>只有在插入或 <font face="Consolas" size=3>resize</font> 时，容器大小达到 <font face="Consolas" size=3>capacity</font>，内存才会被重新分配，分配多少取决于具体实现。实际中可根据具体的情况减少频繁的内存分配。</p>
+<p></font></p>
                 
                   
                 
@@ -739,7 +747,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../3.2/" title="3.std::vector" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1/" title="1.iterator" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -748,19 +756,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                3.std::vector
+                1.iterator
               </span>
             </div>
           </a>
         
         
-          <a href="../3.4/" title="5.std::string" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../3/" title="3.std::string" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                5.std::string
+                3.std::string
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

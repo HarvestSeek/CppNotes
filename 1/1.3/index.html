@@ -75,7 +75,7 @@
     
       <link rel="stylesheet" href="../../css/wab.css">
     
-      <link rel="stylesheet" href="../../css/font.css">
+      <link rel="stylesheet" href="../../css/ifont.css">
     
       <link rel="stylesheet" href="../../css/ktblock.css">
     
@@ -330,6 +330,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-decltype" title="3. decltype 类型指示符" class="md-nav__link">
+    3. decltype 类型指示符
+  </a>
+  
+</li>
+      
       
       
       
@@ -419,8 +426,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.0/" title="1.basic operations of container" class="md-nav__link">
-      1.basic operations of container
+    <a href="../../3/1/" title="1.iterator" class="md-nav__link">
+      1.iterator
     </a>
   </li>
 
@@ -431,8 +438,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.1/" title="2.sequential container" class="md-nav__link">
-      2.sequential container
+    <a href="../../3/2/" title="2.std::vector" class="md-nav__link">
+      2.std::vector
     </a>
   </li>
 
@@ -443,8 +450,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.2/" title="3.std::vector" class="md-nav__link">
-      3.std::vector
+    <a href="../../3/3/" title="3.std::string" class="md-nav__link">
+      3.std::string
     </a>
   </li>
 
@@ -455,8 +462,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.3/" title="4.iterator" class="md-nav__link">
-      4.iterator
+    <a href="../../3/3.0/" title="4.basic operations of container" class="md-nav__link">
+      4.basic operations of container
     </a>
   </li>
 
@@ -467,8 +474,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.4/" title="5.std::string" class="md-nav__link">
-      5.std::string
+    <a href="../../3/3.1/" title="5.sequential container" class="md-nav__link">
+      5.sequential container
     </a>
   </li>
 
@@ -606,6 +613,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-decltype" title="3. decltype 类型指示符" class="md-nav__link">
+    3. decltype 类型指示符
+  </a>
+  
+</li>
+      
       
       
       
@@ -625,10 +639,10 @@
                 
                   <h1>3.type</h1>
                 
-                <p><font face="思源黑体 CN">
+                <p><font class="generalcy">
 <font face="Consolas"></font></p>
 <h3 id="1">1. 类型别名</h3>
-<p>&emsp;类型别名是某种类型的同义词。传统的方法是使用 <kbd><font face="Consolas">typedef</font></kbd> 关键字，新标准使用别名声明定义类型的别名：
+<p>&emsp;类型别名是某种类型的同义词。传统的方法是使用 <code><csg>typedef</code></csg> 关键字，新标准使用别名声明定义类型的别名：
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -639,34 +653,25 @@
 <span class="k">using</span> <span class="n">hour</span> <span class="o">=</span> <span class="kt">int</span><span class="p">;</span>
 <span class="k">using</span> <span class="n">day</span> <span class="o">=</span> <span class="kt">int</span><span class="o">*</span><span class="p">;</span>
 </pre></div>
-</td></tr></table>
-如果某个别名类型指代的是复合类型或常量，就可能产生预料不到的后果。例如：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pstring</span><span class="p">;</span>
+</td></tr></table></p>
+<div class="admonition warning">
+<p class="admonition-title">如果某个别名类型指代的是复合类型或常量，就可能产生预料不到的后果</p>
+<p><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pstring</span><span class="p">;</span>
 <span class="k">const</span> <span class="n">pstring</span> <span class="n">cstr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </pre></div>
-</td></tr></table>
-上面的写法不等同于 <kbd><font face="Consolas">const char *cstr</font></kbd>，它的数据类型是 <font face="Consolas">char</font>，<font face="Consolas">*</font> 是声明符的一部分。而上面的写法 <font face="Consolas">*</font> 是类型中的一部分，<font face="Consolas">cstr</font> 是一个常量指针。</p>
+<font face="Consolas"><strong>const char *cstr</strong></font>: &emsp;它的数据类型是 <font face="Consolas">char</font>，<font face="Consolas">"*"</font> 是声明符的一部分。<br>
+上面的写法 : &emsp;<font face="Consolas">*</font> 是类型中的一部分，<font face="Consolas">cstr</font> 是一个常量指针。</p>
+</div>
 <h3 id="2-auto">2. <font face="Consolas">auto</font> 类型说明符</h3>
-<p>&emsp;在把表达式赋给变量的时候，常常需要知道变量的类型用以声明，但有时做不到。<font face="Consolas">C++11</font> 引入了 <font face="Consolas">auto</font> 说明符，让编译器通过变量的初值分析表达式所属的类型。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">auto</span> <span class="n">item</span> <span class="o">=</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span><span class="p">;</span> <span class="c1">// item must be initialized</span>
+<p>有时无法知道用以声明的变量类型。<font face="Consolas">C++11</font> 引入了 <font face="Consolas">auto</font> 说明符，让编译器通过变量的初值分析表达式所属的类型。
+<div class="codehilite"><pre><span></span><span class="k">auto</span> <span class="n">item</span> <span class="o">=</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span><span class="p">;</span> <span class="c1">// item must be initialized</span>
 </pre></div>
-</td></tr></table>
 ① 如果以引用初始化，编译器以被引用对象的类型作为 <font face="Consolas">auto</font> 的类型；
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
 <span class="k">auto</span> <span class="n">a</span> <span class="o">=</span> <span class="n">r</span><span class="p">;</span>
 </pre></div>
-</td></tr></table>
 ② <font face="Consolas">auto</font> 一般会忽略顶层 <font face="Consolas">const</font>，保留底层 <font face="Consolas">const</font>，如果希望推断的类型是顶层 <font face="Consolas">const</font>，则需要明确指出。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="k">const</span> <span class="kt">int</span> <span class="n">ci</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cr</span> <span class="o">=</span> <span class="n">ci</span><span class="p">;</span>
 
 <span class="k">auto</span> <span class="n">b</span> <span class="o">=</span> <span class="n">ci</span><span class="p">;</span> <span class="c1">// top-level const is ignored</span>
@@ -674,8 +679,33 @@
 
 <span class="k">auto</span> <span class="n">d</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
 <span class="k">auto</span> <span class="n">e</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ci</span><span class="p">;</span> <span class="c1">// low-level const is reserved</span>
-</pre></div>
-</td></tr></table></p>
+</pre></div></p>
+<h3 id="3-decltype">3. <csg>decltype</csg> 类型指示符</h3>
+<p>有时希望通过一个表达式推断出要定义的变量的类型，但是不希望用这个表达式初始化变量。为此，<csg>C++11</csg> 引入了 <cs>decltype</cs>。</p>
+<p><cs>decltype</cs> 对于类型的处理和 <cs>auto</cs> 有些不同：
+<div class="codehilite"><pre><span></span><span class="c1">// 1.</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">ci</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cj</span> <span class="o">=</span> <span class="n">ci</span><span class="p">;</span>
+<span class="k">decltype</span><span class="p">(</span><span class="n">ci</span><span class="p">)</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// x: const int</span>
+<span class="k">decltype</span><span class="p">(</span><span class="n">cj</span><span class="p">)</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// y: const int&amp;, must be inited</span>
+<span class="c1">// 2.</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+<span class="k">decltype</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mi">0</span><span class="p">)</span> <span class="n">b</span><span class="p">;</span>
+<span class="c1">// 3.</span>
+<span class="k">decltype</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="n">c</span><span class="p">;</span> <span class="c1">// ERROR: c is int&amp;</span>
+<span class="c1">// 4.</span>
+<span class="k">decltype</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="n">d</span><span class="p">;</span>   <span class="c1">// d is int</span>
+<span class="k">decltype</span><span class="p">((</span><span class="n">i</span><span class="p">))</span> <span class="n">e</span><span class="p">;</span> <span class="c1">// ERROR: e is int&amp;</span>
+</pre></div></p>
+<p><html> 
+<body>
+<ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 26px;">1. 如果 <cs>decltype</cs> 使用的表达式是单变量，会保留顶层 <cs>const</cs> 和引用的性质；</li>
+<li style="margin:1px 26px;">2. <code><cs>r + 0</cs></code> 的结果是一个 <cs>int</cs>，因此 <code><cs>b</cs></code> 是一个 <cs>int</cs>；</li>
+<li style="margin:1px 26px;">3. 如果 <cs>decltype</cs> 的表达式是一个解引用操作，则获得的是引用类型；</li>
+<li style="margin:1px 26px;">4. 加上括号的变量被当做表达式处理。</li>
+</ul>
+</body>
+</html></p>
 <p></font></p>
                 
                   

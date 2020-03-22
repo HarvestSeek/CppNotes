@@ -75,7 +75,7 @@
     
       <link rel="stylesheet" href="../../css/wab.css">
     
-      <link rel="stylesheet" href="../../css/font.css">
+      <link rel="stylesheet" href="../../css/ifont.css">
     
       <link rel="stylesheet" href="../../css/ktblock.css">
     
@@ -500,8 +500,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.0/" title="1.basic operations of container" class="md-nav__link">
-      1.basic operations of container
+    <a href="../../3/1/" title="1.iterator" class="md-nav__link">
+      1.iterator
     </a>
   </li>
 
@@ -512,8 +512,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.1/" title="2.sequential container" class="md-nav__link">
-      2.sequential container
+    <a href="../../3/2/" title="2.std::vector" class="md-nav__link">
+      2.std::vector
     </a>
   </li>
 
@@ -524,8 +524,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.2/" title="3.std::vector" class="md-nav__link">
-      3.std::vector
+    <a href="../../3/3/" title="3.std::string" class="md-nav__link">
+      3.std::string
     </a>
   </li>
 
@@ -536,8 +536,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.3/" title="4.iterator" class="md-nav__link">
-      4.iterator
+    <a href="../../3/3.0/" title="4.basic operations of container" class="md-nav__link">
+      4.basic operations of container
     </a>
   </li>
 
@@ -548,8 +548,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3/3.4/" title="5.std::string" class="md-nav__link">
-      5.std::string
+    <a href="../../3/3.1/" title="5.sequential container" class="md-nav__link">
+      5.sequential container
     </a>
   </li>
 
@@ -901,8 +901,10 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
 <span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">i1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>   <span class="c1">// &lt;==&gt; int const *i1 = &amp;i;</span>
+<span class="c1">// it&#39;s named i1 -&gt; it points to an int -&gt; the int is const</span>
 <span class="kt">int</span> <span class="o">*</span><span class="n">i2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span> <span class="c1">// ERROR</span>
 
 <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
@@ -915,7 +917,7 @@
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
 <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">i1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
-
+<span class="c1">// it&#39;s named i1 -&gt; i1 is const -&gt; i1 points to an int</span>
 <span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">comb</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
 </pre></div>
 </td></tr></table></p>
