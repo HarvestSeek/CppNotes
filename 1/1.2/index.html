@@ -2,7 +2,6 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -10,33 +9,13 @@
 	
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="Learning notes of cpp">
       
       
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
       <link rel="shortcut icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
     
 	<meta name="format-detection" content="telephone=no">
 
@@ -46,9 +25,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.89dc9fe3.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecd4686e.min.css">
       
       
         
@@ -57,16 +36,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
-    
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
       <link rel="stylesheet" href="../../css/katex.css">
@@ -88,97 +64,80 @@
     
       
         
-<script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-117404761-1", "auto")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
-    }
-  })
-</script>
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-117404761-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
   </head>
   
+  
     
     
     <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="blue">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#1" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Learning Notes of Cpp" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon">import_contacts</i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Learning Notes of Cpp
-            </span>
-            <span class="md-header-nav__topic">
-              
-                2.variable
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Learning Notes of Cpp" class="md-header-nav__button md-logo" aria-label="Learning Notes of Cpp">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Learning Notes of Cpp
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              2.variable
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Type to start searching
           </div>
@@ -188,31 +147,32 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Learning Notes of Cpp" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learning Notes of Cpp" class="md-nav__button md-logo" aria-label="Learning Notes of Cpp">
       
-        <i class="md-icon">import_contacts</i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
     </a>
     Learning Notes of Cpp
   </label>
@@ -252,13 +212,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       I Variable and Type
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="I Variable and Type" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         I Variable and Type
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -285,11 +251,14 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         2.variable
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
       </label>
     
     <a href="./" title="2.variable" class="md-nav__link md-nav__link--active">
@@ -297,30 +266,35 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" title="1. 变量初始化" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     1. 变量初始化
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="1. 变量初始化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-list-initialization" title="(1). 列表初始化 （list initialization)" class="md-nav__link">
+  <a href="#1-list-initialization" class="md-nav__link">
     (1). 列表初始化 （list initialization)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" title="(2). 默认初始化" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     (2). 默认初始化
   </a>
   
@@ -332,22 +306,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2_1" title="2. 复合类型" class="md-nav__link">
+  <a href="#2_1" class="md-nav__link">
     2. 复合类型
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="2. 复合类型">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_1" title="(1). 指针" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     (1). 指针
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_2" title="(2). 引用" class="md-nav__link">
+  <a href="#2_2" class="md-nav__link">
     (2). 引用
   </a>
   
@@ -359,36 +333,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-const" title="3. const 限定符" class="md-nav__link">
+  <a href="#3-const" class="md-nav__link">
     3. const 限定符
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="3. const 限定符">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-const" title="(1). const 引用" class="md-nav__link">
+  <a href="#1-const" class="md-nav__link">
     (1). const 引用
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-const" title="(2). const 与指针" class="md-nav__link">
+  <a href="#2-const" class="md-nav__link">
     (2). const 与指针
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-const_1" title="(3). 顶层 const" class="md-nav__link">
+  <a href="#3-const_1" class="md-nav__link">
     (3). 顶层 const
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4" title="(4). 常量表达式" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     (4). 常量表达式
   </a>
   
@@ -399,9 +373,12 @@
   
 </li>
       
-      
-      
-      
+        <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    4. 附: 声明符的语义分析
+  </a>
+  
+</li>
       
     </ul>
   
@@ -446,13 +423,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       II Function
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="II Function" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         II Function
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -470,6 +453,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2/2.2/" title="2.overload and others" class="md-nav__link">
+      2.overload and others
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -482,13 +477,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       III Container
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="III Container" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         III Container
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -578,13 +579,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       IV IO
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="IV IO" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         IV IO
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -614,13 +621,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       V OOP
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="V OOP" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         V OOP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -666,30 +679,35 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" title="1. 变量初始化" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     1. 变量初始化
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="1. 变量初始化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-list-initialization" title="(1). 列表初始化 （list initialization)" class="md-nav__link">
+  <a href="#1-list-initialization" class="md-nav__link">
     (1). 列表初始化 （list initialization)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" title="(2). 默认初始化" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     (2). 默认初始化
   </a>
   
@@ -701,22 +719,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2_1" title="2. 复合类型" class="md-nav__link">
+  <a href="#2_1" class="md-nav__link">
     2. 复合类型
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="2. 复合类型">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_1" title="(1). 指针" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     (1). 指针
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_2" title="(2). 引用" class="md-nav__link">
+  <a href="#2_2" class="md-nav__link">
     (2). 引用
   </a>
   
@@ -728,36 +746,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-const" title="3. const 限定符" class="md-nav__link">
+  <a href="#3-const" class="md-nav__link">
     3. const 限定符
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="3. const 限定符">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-const" title="(1). const 引用" class="md-nav__link">
+  <a href="#1-const" class="md-nav__link">
     (1). const 引用
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-const" title="(2). const 与指针" class="md-nav__link">
+  <a href="#2-const" class="md-nav__link">
     (2). const 与指针
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-const_1" title="(3). 顶层 const" class="md-nav__link">
+  <a href="#3-const_1" class="md-nav__link">
     (3). 顶层 const
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4" title="(4). 常量表达式" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     (4). 常量表达式
   </a>
   
@@ -768,9 +786,12 @@
   
 </li>
       
-      
-      
-      
+        <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    4. 附: 声明符的语义分析
+  </a>
+  
+</li>
       
     </ul>
   
@@ -785,10 +806,12 @@
               
                 
                 
+                  
+                
+                
                   <h1>2.variable</h1>
                 
-                <p><font face="思源黑体 CN">
-<font face="Consolas"></font></p>
+                <p><font class="generalcy"></p>
 <h3 id="1">1. 变量初始化</h3>
 <p>在 <font face="Consolas">C++</font> 中，初始化是一个复杂的问题，初始化和赋值是两个不同的操作，但在很多其他的语言中二者的区别可以忽略不计。
 <html> 
@@ -801,22 +824,22 @@
 </html></p>
 <h4 id="1-list-initialization">(1). 列表初始化 （<font face="Consolas">list initialization</font>)</h4>
 <p>可通过以下四种方式初始化一个变量：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="kt">int</span> <span class="n">temp</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="kt">int</span> <span class="nf">temp</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 通过花括号初始化即列表初始化，是 <font face="Consolas">C++</font> <font face="Consolas">11</font> 的新特性。其重要特点：当初始值存在丢失的风险，编译器会警告。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="kt">double</span> <span class="n">id</span> <span class="o">=</span> <span class="mf">3.1415926536</span><span class="p">;</span>
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">long</span> <span class="kt">double</span> <span class="n">id</span> <span class="o">=</span> <span class="mf">3.1415926536</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">a</span><span class="p">{</span><span class="n">id</span><span class="p">},</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="n">id</span><span class="p">};</span> <span class="c1">// warning</span>
 <span class="kt">int</span> <span class="nf">c</span><span class="p">(</span><span class="n">id</span><span class="p">),</span> <span class="n">d</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>   <span class="c1">// correct</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table></p>
 <h4 id="2">(2). 默认初始化</h4>
 <p>定义在函数体外的变量默认值为 0，函数体内部的内置类型如果违背初始化，其值如果被访问将会出错。</p>
@@ -824,146 +847,33 @@
 <p>&emsp;复合类型 (<font face="Consolas">compound type</font>) 是指基于其他类型定义的类型，实现对其他类型的间接访问。<font face="Consolas">C++</font> 中有多种复合类型。在这里只介绍指针和左值引用。</br>
 &emsp;<font face="Consolas">&lt;&lt;C++ Primer&gt;&gt;</font> 对 对象 的定义：对象是指一块能存储数据并具有某种类型的内存空间。</p>
 <h4 id="1_1">(1). 指针</h4>
-<p>即通过 <kbd><font face="Consolas">&amp;</font></kbd> 取引用，通过 <kbd><font face="Consolas">*</font></kbd> 解引用以访问原对象的值。其中 <font face="Consolas">void*</font> 是一种特殊的指针类型，可以存放任意对象的地址。从 <font face="Consolas">void*</font> 的视角来看，内存空间仅仅是内存空间，无法访问其中的对象。</br>
-在 <font face="Consolas">C++</font> 中，有以下三种生成空指针的方式：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+<p>&emsp;<cs>void*</cs> 是一种特殊的指针类型，可以存放任意对象的地址。从 <cs>void*</cs> 的视角来看，内存空间仅仅是内存空间，如何访问还需要具体的类型转换。<cy>C++</cy> 是强类型的语言，它的类型检查更严格，不允许 <cy>C</cy> 中支持的 <cs>void*</cs> 的隐式类型转换。</br>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// three ways to generate empty pointer in C++</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
 <span class="kt">int</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span> <span class="o">*</span><span class="n">p3</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-&emsp;在 <font face="Consolas">C</font> 语言中，<font face="Consolas">NULL</font> 被定义为 <kbd><font face="Consolas">#define NULL ((void*)0)</font></kbd>，但在 <font face="Consolas">C++</font> 的 <kbd><font face="Consolas">cstdlib</font></kbd> 中，它被定义为 <kbd><font face="Consolas">#define NULL 0</font></kbd>。原因在于，<font face="Consolas">C++</font> 是强类型的，不允许 <font face="Consolas">C</font> 语言中 <font face="Consolas">void*</font> 指针的隐式转换。</br>
-&emsp;<font face="Consolas">nullptr</font> 是 <font face="Consolas">C++</font> <font face="Consolas">11</font> 引入的新特性，应尽可能使用它初始化空指针而非 0，<font face="Consolas">nullptr</font> 可以自动转换为任意的指针类型，而 0 既是数字又可以是指针，在函数重载时可能会造成歧义。</p>
+&emsp;在 <cy>C</cy> 语言中，<cs>NULL</cs> 被定义为 <code><cs>#define NULL ((void*)0)</cs></code>；在 <cy>C++</cy> 的 <cs>cstdlib</cs> 中，出于强类型的原因，它被定义为 <code><cs>#define NULL 0</code></cs>。<br>
+&emsp;<cs>nullptr</cs> 是 <cy>C++ 11</cy> 引入的新特性，应尽可能使用它初始化空指针，<cs>nullptr</cs> 可以自动转换为任意的指针类型，而 0 既是数字又可以是指针，在函数重载时可能会造成歧义。</p>
 <h4 id="2_2">(2). 引用</h4>
-<p>引用有以下几个特性：
+<p>引用可以视为对指针的包装，有以下几个特性：
 <html> 
 <body>
 <ul style="margin-top:-14px;margin-bottom:10px;line-height:30px;">
-<li style="margin:1px 26px;">引用必须被初始化，即与一个对象绑定，相当于对象的一个别名，绑定关系不可修改；引用只能与对象绑定，不能是字面值或表达式；</li>
-<li style="margin:1px 26px;">对引用的赋值和访问，相当于对原对象的赋值和访问；</li>
+<li style="margin:1px 26px;">引用必须被初始化，即与一个对象绑定，相当于对象的一个别名；</li>
+<li style="margin:1px 26px;">绑定关系不可修改；</li>
+<li style="margin:1px 26px;">引用只能与对象绑定，不能是字面值或表达式；</li>
+<li style="margin:1px 26px;">对引用的赋值和访问，相当于对原对象的赋值和访问，而不是对绑定关系的修改；</li>
 <li style="margin:1px 26px;">引用本身不是对象，不能生成引用的引用。</li>
 </ul>
 </body>
-</html>
-引用可以理解为通过指针常量实现，是一种特殊的指针。</p>
-<p>指针的引用：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
-<span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
-<span class="kt">int</span> <span class="o">*&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
-<span class="n">r</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
-<span class="c1">// the type of r is determined by the nearest operator to r</span>
-</pre></div>
-</td></tr></table></p>
-<h3 id="3-const">3. <font face="Consolas">const</font> 限定符</h3>
-<p>即限定一个变量初始化后不可被改变。如：
-<div class="codehilite"><pre><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">BufSize</span> <span class="o">=</span> <span class="mi">512</span><span class="p">;</span>
-</pre></div>
-在编译时，编译器会把所有用到 <kbd><font face="Consolas">BufSize</font></kbd> 的地方都替换为相应的值。如果需要在其他文件中使用，则需要在 <font face="Consolas">const</font> 前加 <font face="Consolas">extern</font>。</p>
-<h4 id="1-const">(1). <font face="Consolas">const</font> 引用</h4>
-<p>&emsp;<font face="Consolas">const</font> 引用常简称为“常量引用”，指把引用绑定在 <font face="Consolas">const</font> 对象上。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">c1</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-&emsp;<font face="Consolas">const</font> 引用也可能绑定一个非 <font face="Consolas">const</font> 的对象，原对象的值不可通过此引用修改。但非 <font face="Consolas">const</font> 的引用不能绑定一个 <font face="Consolas">const</font> 对象。</p>
-<p>&emsp;由于一般的引用可以对原对象进行修改，因此引用的类型要与原对象一致且不能绑定字面量和表达式，<font face="Consolas">const</font> 引用无需此限制。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// case1</span>
-<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">i1</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">i2</span> <span class="o">=</span> <span class="n">r1</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
-<span class="c1">// case2</span>
-<span class="kt">double</span> <span class="n">val</span> <span class="o">=</span> <span class="mf">3.14</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">v1</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-在情况 2 中，编译器为了让 <font face="Consolas">v1</font> 绑定一个整数对象，创建了一个临时量：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">v1</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
-</pre></div>
-</td></tr></table></p>
-<h4 id="2-const">(2). <font face="Consolas">const</font> 与指针</h4>
-<p>&emsp;<kbd><font face="Consolas">*</font></kbd> 在 <font face="Consolas">const</font> 之后代表这是一个指向常量的指针，从右向左解读，<font face="Consolas">const</font> 限定的部分为“解引用”，即无法通过指针修改原对象的值。需要注意的是，<font face="Consolas">const</font> 对象只能被 <font face="Consolas">const</font> 的指针指向。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">i1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>   <span class="c1">// &lt;==&gt; int const *i1 = &amp;i;</span>
-<span class="c1">// it&#39;s named i1 -&gt; it points to an int -&gt; the int is const</span>
-<span class="kt">int</span> <span class="o">*</span><span class="n">i2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span> <span class="c1">// ERROR</span>
-
-<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">j1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">j</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-&emsp;<kbd><font face="Consolas">*</font></kbd> 在 <font face="Consolas">const</font> 之前代表这是一个常量指针，从右向左解读，此时 <font face="Consolas">const</font> 限定的部分为这个变量，即指针的值不可变，但指针可以指向常量或非常量。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
-<span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">i1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
-<span class="c1">// it&#39;s named i1 -&gt; i1 is const -&gt; i1 points to an int</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">comb</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
-</pre></div>
-</td></tr></table></p>
-<h4 id="3-const_1">(3). 顶层 <font face="Consolas">const</font></h4>
-<p>&emsp;顶层 <font face="Consolas">const</font> (<font face="Calibri" size=3>top-level const</font>) 表示指针本身是常量或某个对象是常量，而底层 <font face="Consolas">const</font> (<font face="Calibri" size=3>low-level const</font>) 表示指针所指的对象是常量。所有的 <font face="Consolas">const</font> 引用都是底层 <font face="Consolas">const</font>。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">p1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span> <span class="c1">// top-level</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>   <span class="c1">// top-level</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">;</span> <span class="c1">// low-level</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">p3</span> <span class="o">=</span> <span class="n">p2</span><span class="p">;</span> <span class="c1">// top + low</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>   <span class="c1">// low-level</span>
-</pre></div>
-</td></tr></table>
-执行对象的拷贝操作时，顶层 <font face="Consolas">const</font> 没有什么问题，底层 <font face="Consolas">const</font> 需要考虑转换。一般的判断方法是，(对于底层 <font face="Consolas">const</font>) 常量不能转换为非常量。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">px</span> <span class="o">=</span> <span class="n">p1</span><span class="p">;</span> 
-<span class="kt">int</span> <span class="o">*</span><span class="n">py</span> <span class="o">=</span> <span class="n">p3</span><span class="p">;</span> <span class="c1">// ERROR</span>
-<span class="n">p2</span> <span class="o">=</span> <span class="n">p3</span><span class="p">;</span> 
-<span class="n">p2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span> <span class="c1">// non-const to const</span>
-<span class="kt">int</span> <span class="o">&amp;</span><span class="n">r1</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span> <span class="c1">// ERROR</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">r2</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-<font face="Consolas">p3</font> 既是顶层 <font face="Consolas">const</font> 又是底层 <font face="Consolas">const</font>，拷贝时只需考虑底层 <font face="Consolas">const</font> 的性质。</p>
-<h4 id="4">(4). 常量表达式</h4>
-<p>&emsp;常量表达式 (<font face="Consolas">const expression</font>) 是指之不会改变并且在编译过程中就能得到结果的表达式。字面量、用常量表达式初始化的 <font face="Consolas">const</font> 对象都是常量表达式。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">max_files</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>        <span class="c1">// const exp</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">limit</span> <span class="o">=</span> <span class="n">max_files</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// const exp</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">get_size</span><span class="p">();</span>     <span class="c1">// non-const exp</span>
-</pre></div>
-</td></tr></table>
-&emsp;在一个复杂的系统中，常量表达式时难以分辨的。<font face="Consolas">C++11</font> 规定，允许将变量声明为 <font face="Consolas">constexpr</font>，为变量增加 <font face="Consolas">const</font> 属性，并让编译器验证是否为常量表达式。</br>
-&emsp;<font face="Consolas">constexpr</font> 限制可声明的类型为字面值类型 (<font face="Calibri" size=3>literal type</font>)，包括算术类型、指针和引用，不包括自定义类和 <font face="Consolas">string</font> 类等。</br>
-&emsp;对于通过函数初始化的 <font face="Consolas">const</font> 变量，如果函数是一个 <font face="Consolas">constexpr</font> 函数 (函数的形参和返回值都是字面值类型，且函数的 <font face="Consolas">return</font> 语句只有一个)，并且函数的实参都是常量表达式，则相应的变量也是常量表达式。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+</html></p>
+<p>例子：
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -971,7 +881,117 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">constexpr</span> <span class="kt">int</span> <span class="nf">scale</span><span class="p">(</span><span class="kt">int</span> <span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cm">/* initialize */</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">&amp;</span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">&amp;</span><span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+<span class="cm">/* referencing a pointer */</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="3-const">3. <font face="Consolas">const</font> 限定符</h3>
+<p>即限定一个变量初始化后不可被改变。如：
+<div class="highlight"><pre><span></span><code><span class="k">const</span> <span class="kt">int</span> <span class="n">BufSize</span> <span class="o">=</span> <span class="mi">512</span><span class="p">;</span>
+</code></pre></div>
+在编译时，编译器会把所有用到 <kbd><font face="Consolas">BufSize</font></kbd> 的地方都替换为相应的值。如果需要在其他文件中使用，则需要在 <font face="Consolas">const</font> 前加 <font face="Consolas">extern</font>。</p>
+<h4 id="1-const">(1). <font face="Consolas">const</font> 引用</h4>
+<p>① <cs>const</cs> 引用也可能绑定一个非 <cs>const</cs> 的对象，含义为原对象的值不可通过此引用修改。<br>
+&emsp;非 <cs>const</cs> 的引用不能绑定一个 <cs>const</cs> 对象。</p>
+<p>② 由于一般的引用可以对原对象进行修改，因此引用的类型要与原对象类型一致，且不能绑定字面量和表达式。
+&emsp;<cs>const</cs> 引用没有此限制。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// case1</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">i1</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">i2</span> <span class="o">=</span> <span class="n">r1</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="c1">// case2</span>
+<span class="kt">double</span> <span class="n">val</span> <span class="o">=</span> <span class="mf">3.14</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">v1</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+③ 如果 <cs>const</cs> 引用绑定的类型与引用的类型不一致，编译器会通过隐式转换生成一个临时量。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">const</span> <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">v1</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table></p>
+<h4 id="2-const">(2). <font face="Consolas">const</font> 与指针</h4>
+<p>$\ast$ 在 <cs>const</cs> 之后代表这是一个指向常量的指针，<cs>const</cs> 对象只能被 <cs>const</cs> 的指针指向。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">const</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">i1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>   <span class="c1">// &lt;==&gt; int const *i1 = &amp;i;</span>
+</code></pre></div>
+</td></tr></table>
+$\ast$ 在 <font face="Consolas">const</font> 之前代表这是一个常量的指针。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">comb</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table></p>
+<h4 id="3-const_1">(3). 顶层 <font face="Consolas">const</font></h4>
+<p>&emsp;顶层 <cs>const</cs> (<cy2>top-level const</cy2>) 表示指针本身是常量或某个对象是常量，而底层 <cs>const</cs> 表示指针所指的对象是常量。所有的 <cs>const</cs> 引用都是底层 <cs>const</cs>。
+<div style="margin-top:-10px">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">p1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span> <span class="c1">// top-level</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>   <span class="c1">// top-level</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">;</span> <span class="c1">// low-level</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">p3</span> <span class="o">=</span> <span class="n">p2</span><span class="p">;</span> <span class="c1">// top + low</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>   <span class="c1">// low-level</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+某个对象被拷贝时，顶层 <cs>const</cs> 没有什么问题，底层 <cs>const</cs> 需要考虑其性质是否丢失。
+<div style="margin-top:-10px">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="o">*</span><span class="n">px</span> <span class="o">=</span> <span class="n">p1</span><span class="p">;</span> 
+<span class="kt">int</span> <span class="o">*</span><span class="n">py</span> <span class="o">=</span> <span class="n">p3</span><span class="p">;</span> <span class="c1">// ERROR</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">p3</span><span class="p">;</span> 
+<span class="n">p2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span> <span class="c1">// non-const to const</span>
+<span class="kt">int</span> <span class="o">&amp;</span><span class="n">r1</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span> <span class="c1">// lose lower-const property of referencing c</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">r2</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+</div></p>
+<h4 id="4">(4). 常量表达式</h4>
+<p>常量表达式指值不会改变并且在编译过程中就能确定结果的表达式，比 <cs>const</cs> 定义更强。字面量、用常量表达式初始化的 <cs>const</cs> 对象都是常量表达式。
+<div style="margin-top:-10px">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">const</span> <span class="kt">int</span> <span class="n">max_files</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>        <span class="c1">// const exp</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">limit</span> <span class="o">=</span> <span class="n">max_files</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// const exp</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">get_size</span><span class="p">();</span>     <span class="c1">// non-const exp</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+在复杂的系统中，常量表达式是难以分辨的。<cy>C++11</cy> 可以将变量声明为 <cs>constexpr</cs>，实现对编译时常量的静态检查。</br>
+&emsp;<cs>constexpr</cs> 限制可声明的类型为字面值类型 (<cy2>literal type</cy2>)，包括算术类型、指针和引用，不包括自定义类和 <cs>string</cs> 类等。</br>
+&emsp;对于通过函数初始化的 <cs>const</cs> 变量，如果函数是一个 <cs>constexpr</cs> 函数 (函数的形参和返回值都是字面值类型，且函数的 <cs>return</cs> 语句只有一个)，并且函数的实参都是常量表达式，则相应的变量也是常量表达式。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">constexpr</span> <span class="kt">int</span> <span class="nf">scale</span><span class="p">(</span><span class="kt">int</span> <span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">arg</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -980,34 +1000,50 @@
     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
     <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">val2</span> <span class="o">=</span> <span class="n">scale</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> <span class="c1">// ERROR</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>对于指针来说，需要注意：
 <html> 
 <body>
 <ul style="margin-top:-16px;margin-bottom:10px;line-height:30px;">
-<li style="margin:1px 26px;">函数体内定义的变量一般来说放在非固定地址中，<font face="Consolas">constexpr</font> 指针不能指向这样的变量；</li>
-<li style="margin:1px 26px;">在 <font face="Consolas">constexpr</font> 声明后定义了一个指针，则只是生成了一个顶层 <font face="Consolas">const</font>，即常量指针。</li>
+<li style="margin:1px 26px;">函数体内定义的变量一般来说放在非固定地址中，<cs>constexpr</cst> 指针不能指向这样的变量；</li>
+<li style="margin:1px 26px;">在 <cs>constexpr</cs> 声明后定义了一个指针，则只是生成了一个顶层 <cs>const</cs>，即常量指针。</li>
 </ul>
 </body>
 </html>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">constexpr</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">constexpr</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">41</span><span class="p">;</span>
 <span class="c1">// i and j must be defined out of function</span>
 <span class="k">constexpr</span> <span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
 <span class="k">constexpr</span> <span class="kt">int</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">j</span><span class="p">;</span> 
 <span class="c1">// ERROR: constexpr int *p1 = &amp;i</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table></p>
+<h3 id="4_1">4. 附: 声明符的语义分析</h3>
+<p><cy>C/C++</cy> 中声明符 (<cy2>declarator</cy2>) 的语义规则如下:
+<ul style="margin-top:-16px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 26px;">声明符成分的优先级: 括号 $&gt;$ 后缀符 <csg>()、[]</csg> $&gt;$ 前缀符 (<cs>*、&amp;、const</cs>、类型等)</li>
+<li style="margin:1px 26px;">前缀符的分析顺序是从右向左 (自底向上)</li>
+<li style="margin:1px 26px;">从标识符 <cy>idenfier</cy> 开始，按照上述优先级分析语义</li>
+</ul></p>
+<p>例子:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="o">*&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
+<span class="c1">// r 是一个引用，引用的是一个指针</span>
+<span class="kt">char</span><span class="o">*</span> <span class="nf">const</span> <span class="p">(</span><span class="o">*</span> <span class="n">farr</span><span class="p">[</span><span class="mi">10</span><span class="p">])(</span><span class="kt">int</span><span class="p">);</span>
+<span class="c1">// farr 是一个数组，数组存放指针，存放的指针指向函数，函数返回 char* const</span>
+<span class="kt">char</span> <span class="o">*</span> <span class="k">const</span> <span class="o">*</span> <span class="p">(</span><span class="o">*</span><span class="n">next</span><span class="p">)();</span>
+<span class="c1">// next 是一个指针，这个指针指向一个函数，函数返回一个指针，</span>
+<span class="c1">//    返回的指针指向 char * const 类型</span>
+<span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">))[][</span><span class="mi">20</span><span class="p">];</span>
+<span class="c1">// func 是一个函数，函数返回一个指针，指针指向 int[][20] 类型的数组</span>
+</code></pre></div></p>
 <p></font></p>
-                
-                  
                 
               
               
@@ -1024,34 +1060,34 @@
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../1.1/" title="1.primitive type" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../1.1/" title="1.primitive type" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 1.primitive type
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../1.3/" title="3.type" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../1.3/" title="3.type" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 3.type
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
             </div>
           </a>
         
@@ -1062,11 +1098,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -1075,9 +1110,18 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
         <script src="../../js/katex.js"></script>
       

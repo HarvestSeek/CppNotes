@@ -2,7 +2,6 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -10,33 +9,13 @@
 	
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="Learning notes of cpp">
       
       
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
       <link rel="shortcut icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
     
 	<meta name="format-detection" content="telephone=no">
 
@@ -46,9 +25,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.89dc9fe3.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecd4686e.min.css">
       
       
         
@@ -57,16 +36,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
-    
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
       <link rel="stylesheet" href="../../css/katex.css">
@@ -88,97 +64,80 @@
     
       
         
-<script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-117404761-1", "auto")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
-    }
-  })
-</script>
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-117404761-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
   </head>
   
+  
     
     
     <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="blue">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#1-const" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-const" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Learning Notes of Cpp" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon">import_contacts</i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Learning Notes of Cpp
-            </span>
-            <span class="md-header-nav__topic">
-              
-                1.parameters and returns
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Learning Notes of Cpp" class="md-header-nav__button md-logo" aria-label="Learning Notes of Cpp">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Learning Notes of Cpp
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              1.parameters and returns
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Type to start searching
           </div>
@@ -188,31 +147,32 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Learning Notes of Cpp" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learning Notes of Cpp" class="md-nav__button md-logo" aria-label="Learning Notes of Cpp">
       
-        <i class="md-icon">import_contacts</i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
     </a>
     Learning Notes of Cpp
   </label>
@@ -250,13 +210,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       I Variable and Type
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="I Variable and Type" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         I Variable and Type
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -324,13 +290,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       II Function
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="II Function" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         II Function
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -345,11 +317,14 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         1.parameters and returns
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
       </label>
     
     <a href="./" title="1.parameters and returns" class="md-nav__link md-nav__link--active">
@@ -357,52 +332,78 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-const" title="1. const 形参" class="md-nav__link">
+  <a href="#1-const" class="md-nav__link">
     1. const 形参
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" title="2. 引用形参和指针形参" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     2. 引用形参和指针形参
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" title="3. 可变参数" class="md-nav__link">
-    3. 可变参数
+  <a href="#3" class="md-nav__link">
+    3. 数组形参
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" title="4. 返回值" class="md-nav__link">
-    4. 返回值
+  <a href="#4" class="md-nav__link">
+    4. 可变参数
   </a>
   
-    <nav class="md-nav">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 默认实参
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 返回值
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 返回值">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" title="(1). 引用返回左值" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     (1). 引用返回左值
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" title="(2). 列表初始化返回值" class="md-nav__link">
+  <a href="#2_1" class="md-nav__link">
     (2). 列表初始化返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    (3). 返回一个数组
   </a>
   
 </li>
@@ -412,14 +413,22 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.2/" title="2.overload and others" class="md-nav__link">
+      2.overload and others
+    </a>
   </li>
 
         
@@ -435,13 +444,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       III Container
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="III Container" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         III Container
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -531,13 +546,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       IV IO
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="IV IO" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         IV IO
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -567,13 +588,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       V OOP
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="V OOP" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         V OOP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -619,52 +646,78 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-const" title="1. const 形参" class="md-nav__link">
+  <a href="#1-const" class="md-nav__link">
     1. const 形参
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" title="2. 引用形参和指针形参" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     2. 引用形参和指针形参
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" title="3. 可变参数" class="md-nav__link">
-    3. 可变参数
+  <a href="#3" class="md-nav__link">
+    3. 数组形参
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" title="4. 返回值" class="md-nav__link">
-    4. 返回值
+  <a href="#4" class="md-nav__link">
+    4. 可变参数
   </a>
   
-    <nav class="md-nav">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 默认实参
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 返回值
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 返回值">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" title="(1). 引用返回左值" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     (1). 引用返回左值
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" title="(2). 列表初始化返回值" class="md-nav__link">
+  <a href="#2_1" class="md-nav__link">
     (2). 列表初始化返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    (3). 返回一个数组
   </a>
   
 </li>
@@ -673,10 +726,6 @@
     </nav>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -691,13 +740,15 @@
               
                 
                 
+                  
+                
+                
                   <h1>1.parameters and returns</h1>
                 
-                <p><font face="思源黑体 CN">
-<font face="Consolas"></font></p>
+                <p><font class="generalcy"></p>
 <h3 id="1-const">1. <font face="Consolas">const</font> 形参</h3>
 <p>形参初始化和变量初始化是一样的，对于顶层和底层 <font face="Consolas">const</font> 的讨论仍适用于此。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -707,7 +758,7 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">reset</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">n</span><span class="p">);</span>
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">reset</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">n</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">reset</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
     <span class="p">...</span>
 
@@ -718,16 +769,35 @@
 <span class="n">reset</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 <span class="n">reset</span><span class="p">(</span><span class="n">ci</span><span class="p">);</span>  <span class="c1">// ERROR</span>
 <span class="n">reset</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>  <span class="c1">// ERROR</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h3 id="2">2. 引用形参和指针形参</h3>
-<p>&emsp;形参是函数内的临时变量，和一般的变量初始化一样，拷贝不会影响原值。已知引用也是通过指针实现的，当需要修改原对象，可以设置形参为引用或指针，二者区别不大。</br>
-&emsp;当不需要修改原对象，通过指针或引用传入可以避免对原对象进行拷贝 (部分对象甚至不支持拷贝)，节省一部分空间。此时最好使用常量引用，好处在于：① 可以直接传入对象，不必取引用；② 限制对原对象修改；③ 普通引用会限制 <font face="Consolas">const</font> 对象、字面量、需要类型转换的对象的传入。</p>
-<h3 id="3">3. 可变参数</h3>
-<p>&emsp;为实现可变参数，<font face="Consolas">C++11</font> 提供了两种方法。若所有实参类型都相同，可使用 <kbd><font face="Consolas">initializer_list</font></kbd> 类型的形参，它定义在同名的头文件中；如果实参的类型不同，可以编写一个可变参数模板。在与 <font face="Consolas">C</font> 接口交互的程序中，一般使用省略符 <kbd><font face="Consolas">...</font></kbd>，只对于 <font face="Consolas">C</font> 和 <font face="Consolas">C++</font> 通用的类型使用它。</p>
+<p>&emsp;形参是函数内的临时变量，和一般的变量初始化一样，拷贝不会影响原值。若需要修改原对象，可以设置形参为引用或指针，二者区别不大。</br>
+&emsp;当不需要修改原对象，通过指针或引用传入可以避免对原对象进行拷贝 (部分对象甚至不支持拷贝)，节省一部分空间。此时最好使用常量引用，好处在于：
+<ul style="margin-top:-16px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 26px;">可以直接传入对象，不必取引用</li>
+<li style="margin:1px 26px;">限制对原对象修改</li>
+<li style="margin:1px 26px;">普通引用会限制 <cs>const</cs> 对象、字面量、需要类型转换的对象的传入</li>
+</ul></p>
+<h3 id="3">3. 数组形参</h3>
+<p>由于数组不能拷贝，且数组标识符的含义即是指针，因此传参只能通过指针。下面三种形式是等价的，由于参数的类型表达式是指针，第二种形式的维度可以省略。
+<div style="margin-top:-10px;margin-bottom:-10px;"></p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="p">[]);</span>
+<span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="p">[</span><span class="mi">10</span><span class="p">]);</span>
+</code></pre></div>
+</div>
+当多维数组作为形参时，实际上传递的是最外层一维数组首元素的指针，此时第二维及其之后的维数都不能省略，它们是外层数组元素类型表达式的一部分。</p>
+<h3 id="4">4. 可变参数</h3>
+<p><font face="Consolas">C++11</font> 提供了以下方法实现可变参数
+<ul style="margin-top:-15px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 26px;">若所有实参类型都相同，可使用 <cy2>initializer_list</cy2>，它定义在同名的头文件中</li>
+<li style="margin:1px 26px;">若实参的类型不同，可以编写一个可变参数模板</li>
+<li style="margin:1px 26px;">与 <csg>C</csg> 接口交互的程序中，一般使用省略符 <csg>...</csg></li>
+</ul></p>
 <p><body>
-<table id="wab">
+<table id="wab" style="margin-left:60px;">
 <tr> <th colspan="2">initiallizer_list</th></tr>
 <tr class="noright">
     <td class="noright">initializer_list&lt;T&gt; lst;</td>
@@ -743,18 +813,31 @@
 </tr>
 </table>
 </body></p>
-<p>和 <kbd><font face="Consolas">vector</font></kbd> 不同的是，<kbd><font face="Consolas">initializer_list</font></kbd> 中的永远是常量。在传递实参的时候，要把参数写在花括号内。</p>
-<h3 id="4">4. 返回值</h3>
+<p>对于 <cy2>initializer_list</cy2>：
+<ul style="margin-top:-16px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 26px;">传递实参时要写在花括号内</li>
+<li style="margin:1px 26px;"><cy2>initializer_list</cy2> 中的元素是常量，且只能通过迭代器访问</li>
+</ul></p>
+<h3 id="5">5. 默认实参</h3>
+<ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 6px;">默认实参可以用表达式去初始化，但表达式的值是运行时确定的</li>
+<li style="margin:1px 6px;">默认实参只需声明一次，且放在参数表的最后</li>
+    <ul style="margin-top:0px;margin-bottom:0px;list-style-type:circle;line-height:30px;">
+    <li style="margin:1px 26px;">严格来说，同一函数如果默认实参不同可以声明多次，但需要保证每个声明的默认实参正交、被声明的默认实参加起来连续地位于参数表的末尾</li>
+    </ul>
+</ul>
+
+<h3 id="6">6. 返回值</h3>
 <h4 id="1">(1). 引用返回左值</h4>
 <p>调用一个返回引用的函数得到左值，其他返回类型得到右值。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="o">&amp;</span><span class="n">get_val</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">,</span> <span class="n">string</span><span class="o">::</span><span class="n">size_type</span> <span class="n">ix</span><span class="p">)</span> <span class="p">{</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">char</span> <span class="o">&amp;</span><span class="n">get_val</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">,</span> <span class="n">string</span><span class="o">::</span><span class="n">size_type</span> <span class="n">ix</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">str</span><span class="p">[</span><span class="n">ix</span><span class="p">];</span>
 <span class="p">}</span>
 
@@ -762,18 +845,18 @@
     <span class="n">string</span> <span class="n">s</span><span class="p">(</span><span class="s">&quot;a value&quot;</span><span class="p">);</span>
     <span class="n">get_val</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table></p>
 <h4 id="2_1">(2). 列表初始化返回值</h4>
 <p><font face="Consolas">C++11</font> 支持函数返回花括号列表，用于初始化函数返回的临时变量。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">process</span><span class="p">(</span><span class="n">string</span> <span class="n">expected</span><span class="p">,</span> <span class="n">string</span> <span class="n">actual</span><span class="p">)</span> <span class="p">{</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">process</span><span class="p">(</span><span class="n">string</span> <span class="n">expected</span><span class="p">,</span> <span class="n">string</span> <span class="n">actual</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">expected</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> 
         <span class="k">return</span> <span class="p">{};</span>
     <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">expected</span> <span class="o">==</span> <span class="n">actual</span><span class="p">)</span>
@@ -781,12 +864,32 @@
     <span class="k">else</span>
         <span class="k">return</span> <span class="p">{</span><span class="s">&quot;functionX&quot;</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="n">actual</span><span class="p">};</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
+<h4 id="3_1">(3). 返回一个数组</h4>
+<p>和数组作为参数的情况类似，由于数组不能拷贝，数组也不能作为返回值，但是可以返回一个指向数组的指针。其声明方式如下:</p>
+<p>① 类型别名</p>
+<div style="margin-top:-10px;margin-bottom:-10px;">
+
+<div class="highlight"><pre><span></span><code><span class="k">typedef</span> <span class="kt">int</span> <span class="n">arrT</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="c1">// or</span>
+<span class="k">using</span> <span class="n">arrT</span> <span class="o">=</span> <span class="kt">int</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="n">arrT</span><span class="o">*</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">);</span>
+</code></pre></div>
+</div>
+
+<p>② 直接声明
+<div style="margin-top:-10px;margin-bottom:-10px;"></p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="p">(</span><span class="o">*</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">))[</span><span class="mi">10</span><span class="p">];</span>
+</code></pre></div>
+</div></p>
+<p>③ 尾置返回类型
+<div style="margin-top:-10px;margin-bottom:-10px;"></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">auto</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="p">)[</span><span class="mi">10</span><span class="p">];</span>
+</code></pre></div>
+</div></p>
 <p></font></p>
-                
-                  
                 
               
               
@@ -803,34 +906,34 @@
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../1/1.4/" title="4.array" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../../1/1.4/" title="4.array" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 4.array
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../../3/1/" title="1.iterator" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../2.2/" title="2.overload and others" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                1.iterator
-              </span>
+                2.overload and others
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
             </div>
           </a>
         
@@ -841,11 +944,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -854,9 +956,18 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
         <script src="../../js/katex.js"></script>
       
