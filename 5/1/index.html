@@ -605,6 +605,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    (3). 零初始化
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -720,6 +727,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    (3). 零初始化
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -797,33 +811,76 @@
 </code></pre></div>
 
 <h3 id="2-c">2. <cy>C++<cy>&ensp;初始化</h3>
-<p><cy>C++</cy> 的初始化分为 <cy>6</cy> 种：零初始化, 默认初始化, 值初始化, 直接初始化, 拷贝初始化, 列表初始化</p>
+<p><cy>C++</cy> 有多种初始化行为：零初始化, 默认初始化, 值初始化, 直接初始化, 拷贝初始化, 列表初始化</p>
 <h4 id="1_2">(1). 默认初始化</h4>
-<p><html> 
-<body>
+<p><csg><i>Syntax</i></csg>
+<div class="highlight"><pre><span></span><code><span class="n">T</span> <span class="n">object</span><span class="p">;</span>       <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">new</span> <span class="n">T</span>           <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></p>
 <ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
-<li style="margin:1px 16px;">块作用域内不使用任何初始值初始化一个非静态变量或数组</li>
-    <ul style="margin-top:0px;margin-bottom:0px;list-style-type:circle;line-height:30px;">
-    <li style="margin:1px 36px;">未指明初值的静态 <cy>or</cy> 全局也会进行默认初始化，但由于零初始化相当于什么也没做</li>
-    <li style="margin:1px 36px;">对于非类变量，如一部分基本类型和指针，默认初始化的值是未定义的</li>
-    <li style="margin:1px 36px;">对于数组，其中每个元素都进行默认初始化</li>
-    </ul>
-<li style="margin:1px 16px;"><csg><code>T object = new T</code></csg>，<csg><code>T object = new T()</code></csg></li>
-<li style="margin:1px 16px;">一个类类型显式使用默认初始化，或者一个类类型是另一个类的成员且没有在 <cy>constructor initialize list</cy> 中初始化。它们均会导致默认构造函数被调用。</li>
+<li style="margin:1px 16px;">具有静态存储期或自动存储期的变量，声明 <cy>without initializer</cy></li>
+<li style="margin:1px 16px;">通过 <cs>new</cs> 声明的具有动态存储期的变量，声明 <cy>without initializer</cy></li>
+<li style="margin:1px 16px;">基类或某个非静态数据成员，在某个 <cy>constructor</cy> 的 <cy>initializer list</cy> 没有被声明，而这个构造函数又被调用</li>
 </ul>
-</body>
-</html></p>
+
+<p><csg><i>Effect</i></csg>
+<ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>class type</cy>，调用默认构造函数为其赋初值</li>
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>array type</cy>，其中的每个元素都执行默认初始化</li>
+<li style="margin:1px 16px;">其他情况下，自动存储期内的对象被赋予一个 <cy>indeterminate value</cy></li>
+</ul>
+<a href="https://en.cppreference.com/w/cpp/language/default_initialization">details</a>
+<div style="margin-top:30px"></div></p>
 <h4 id="2_1">(2). 值初始化</h4>
-<p><html> 
-<body>
-<ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
-<li style="margin:1px 16px;">无名临时变量：<csg><code>T(), new T(), T{}, new T{}</code></csg></li>
-<li style="margin:1px 16px;">不使用初值定义局部静态变量</li>
-<li style="margin:1px 16px;">数组初始化过程中提供的初值数量少于数组的大小时</li>
+<p><csg><i>Syntax</i></csg>
+<div class="highlight"><pre><span></span><code><span class="n">T</span><span class="p">(),</span> <span class="n">T</span><span class="p">{},</span> <span class="n">T</span> <span class="n">obj</span><span class="p">(),</span> <span class="n">T</span> <span class="n">obj</span><span class="p">{}</span>                                             <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">new</span> <span class="n">T</span><span class="p">(),</span> <span class="k">new</span> <span class="n">T</span><span class="p">{},</span>                                                      <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Class</span><span class="o">::</span><span class="n">Class</span><span class="p">(...)</span> <span class="o">:</span> <span class="n">member</span><span class="p">()</span> <span class="p">{...},</span> <span class="n">Class</span><span class="o">::</span><span class="n">Class</span><span class="p">(...)</span> <span class="o">:</span> <span class="n">member</span><span class="p">{}</span> <span class="p">{...}</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></p>
+<ul style="margin-top:-10px;margin-bottom:-10px;line-height:30px;">
+<li style="margin:1px 16px;">命名对象或者无名的临时对象，通过 <cy>initializer with empty parenthesis or braces</cy> 初始化</li>
+<li style="margin:1px 16px;">通过 <cs>new</cs> 声明的具有动态存储期的变量，通过 <cy>initializer with empty parenthesis or braces</cy> 初始化</li>
+<li style="margin:1px 16px;">非静态数据成员或者基类，在 <cy>initializer list</cy> 中，通过 <cy>initializer with empty parenthesis or braces</cy> 初始化</li>
 </ul>
-</body>
-</html>
-对于进行值初始化的类类型，如果其默认构造函数是用户自定义的，则进行默认初始化；如果是合成的，则进行零初始化。</p>
+
+<p>此外，在上述情形中
+<ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是聚合类型，且通过空的花括号初始化，则执行 <cy>aggregation-initialization</cy></li>
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是类类型，且没有默认构造器，但有一个构造器使用了 <code><csg>std::initializer_list</csg></code>，则执行 <cy>list-initialization</cy></li>
+</ul></p>
+<p><csg><i>Effect</i></csg>
+<ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>class type</cy>，</li>
+    <ul style="margin-top:0px;margin-bottom:0px;list-style-type:circle;line-height:30px;">
+    <li style="margin:1px 26px;">若 <cy>T</cy> 没有默认构造函数 / 有用户提供的默认构造函数 / 有 <cy>deleted</cy> 构造函数，执行默认初始化</li>
+    <li style="margin:1px 26px;">若 <cy>T</cy> 的默认构造函数是隐式定义的 /  通过 <code><csg>= default</csg></code> 显式指明的，且如果这个构造函数是 <cy>trivial</cy> 的，执行零初始化；如果是 <cy>non-trivial</cy> 的，执行默认初始化</li>
+    </ul>
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>array type</cy>，其中的每个元素都执行值初始化</li>
+<li style="margin:1px 16px;">其他情况下，执行零初始化</li>
+</ul>
+<a href="https://en.cppreference.com/w/cpp/language/value_initialization">details</a>
+<div style="margin-top:30px"></div></p>
+<h4 id="3_1">(3). 零初始化</h4>
+<p><csg><i>Syntax</i></csg>
+<div class="highlight"><pre><span></span><code><span class="k">static</span> <span class="n">T</span> <span class="nf">object</span>                                             <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">T</span><span class="p">(),</span> <span class="n">T</span> <span class="n">t</span> <span class="o">=</span> <span class="p">{},</span> <span class="n">T</span><span class="p">{}</span>                                          <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">CharT</span> <span class="n">array</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>                                         <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></p>
+<ul style="margin-top:-10px;margin-bottom:-10px;line-height:30px;">
+<li style="margin:1px 16px;">具有静态存储期的、被命名的变量</li>
+<li style="margin:1px 16px;">在值初始化是提过的情形</li>
+<li style="margin:1px 16px;">字符的数组通过字符串字面量初始化时，字符串长度不够，剩下的字符被零初始化</li>
+</ul>
+
+<p><csg><i>Effect</i></csg>
+<ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>scalar type</cy>，<cy>T</cy> 的初始值是整数常量 <cy>0</cy> 隐式转换为 <cy>T</cy> 后的值</li>
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>non-union class type</cy>，所有的基类和非静态成员被零初始化，<cy>padding</cy> 用 <cy>0</cy> 比特填充，其所有构造函数都被忽略</li>
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>array type</cy>，其中的每个元素都执行零初始化</li>
+<li style="margin:1px 16px;">如果 <cy>T</cy> 是引用类型，什么也不做</li>
+</ul>
+<a href="https://en.cppreference.com/w/cpp/language/zero_initialization">details</a>
+<div style="margin-top:30px"></div></p>
 <p></font></p>
                 
               
