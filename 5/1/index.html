@@ -853,7 +853,7 @@
 <li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>class type</cy>，</li>
     <ul style="margin-top:0px;margin-bottom:0px;list-style-type:circle;line-height:30px;">
     <li style="margin:1px 26px;">若 <cy>T</cy> 没有默认构造函数 / 有用户提供的默认构造函数 / 有 <cy>deleted</cy> 构造函数，执行默认初始化</li>
-    <li style="margin:1px 26px;">若 <cy>T</cy> 的默认构造函数是隐式定义的 /  通过 <code><csg>= default</csg></code> 显式指明的，且如果这个构造函数是 <cy>trivial</cy> 的，执行零初始化；如果是 <cy>non-trivial</cy> 的，执行默认初始化</li>
+    <li style="margin:1px 26px;">若 <cy>T</cy> 的默认构造函数是隐式定义的 /  通过 <code><csg>= default</csg></code> 显式指明的，且如果这个构造函数是 <cy>trivial</cy> 的，执行零初始化；如果是 <cy>non-trivial</cy> 的，执行零初始化后还要执行默认初始化</li>
     </ul>
 <li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>array type</cy>，其中的每个元素都执行值初始化</li>
 <li style="margin:1px 16px;">其他情况下，执行零初始化</li>
