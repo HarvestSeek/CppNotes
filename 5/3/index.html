@@ -581,8 +581,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    (2). 拷贝赋值运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    (3). 析构函数
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    三 / 五法则
+  </a>
   
 </li>
       
@@ -636,8 +657,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    (2). 拷贝赋值运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    (3). 析构函数
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    三 / 五法则
+  </a>
   
 </li>
       
@@ -681,7 +723,7 @@
     <span class="n">Person</span><span class="p">(</span><span class="k">const</span> <span class="n">Person</span><span class="o">&amp;</span> <span class="n">person</span><span class="p">);</span>
     <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="p">};</span>
 <span class="c1">// be equivalent to synthetic copy constructor</span>
 <span class="n">Person</span><span class="o">::</span><span class="n">Person</span><span class="p">(</span><span class="k">const</span> <span class="n">Person</span><span class="o">&amp;</span> <span class="n">person</span><span class="p">)</span> <span class="o">:</span> <span class="n">name</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">name</span><span class="p">),</span> <span class="n">age</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">age</span><span class="p">)</span> 
 <span class="p">{</span> <span class="p">}</span>
@@ -691,7 +733,7 @@
     <ul style="margin-top:0px;margin-bottom:0px;list-style-type:circle;line-height:30px;">
     <li style="margin:1px 46px;">用 <code><csg>=</csg></code> 定义变量</li>
     <li style="margin:1px 46px;">一个对象作为实参传递给非引用类型的形参</li>
-    <li style="margin:1px 46px;">返回一个非引用类型的对象</li>
+    <li style="margin:1px 46px;">返回一个非引用类型的对象 (很有可能被编译器优化掉)</li>
     <li style="margin:1px 46px;">通过花括号列表初始化聚合类</li>
     </ul>
 <li style="margin:1px 16px;">需要注意拷贝初始化过程中的隐式类型转换</li>
@@ -703,6 +745,97 @@
     </div>
 </ul>
 
+<h4 id="2">(2). 拷贝赋值运算符</h4>
+<p>&emsp;拷贝构造函数控制初始化，而拷贝赋值运算符控制赋值。赋值运算符的重载必须定义为成员函数，即意味着左侧运算对象绑定为 <cs>this</cs>；其参数接收一个同类型对象，为与内置类型的赋值运算符保持一致，返回值为指向左侧对象的引用。<br>
+&emsp;同拷贝构造函数一样，如果一个类未重载赋值运算符，编译器会自动生成它的合成版本，其默认行为是调用每个非静态成员的赋值运算符完成赋值。
+<div style="margin-top:-10px;">
+<div class="highlight"><pre><span></span><code><span class="c1">// be equivalent to synthetic copy operator</span>
+<span class="n">Person</span><span class="o">&amp;</span> <span class="n">Person</span><span class="o">::</span><span class="n">Person</span><span class="p">(</span><span class="k">const</span> <span class="n">Person</span><span class="o">&amp;</span> <span class="n">person</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">person</span><span class="p">.</span><span class="n">name</span><span class="p">;</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="n">person</span><span class="p">.</span><span class="n">age</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div></p>
+<h4 id="3">(3). 析构函数</h4>
+<ul style="margin-top:-10px;margin-bottom:10px">
+<li style="margin:1px 16px;">在析构函数中，首先执行函数体，然后按照初始化的逆序销毁成员。</li>
+    <ul style="margin-top:0px;margin-bottom:0px;list-style-type:circle;line-height:30px;">
+    <li style="margin:1px 46px;">函数体部分放置类设计者希望的收尾工作</li>
+    <li style="margin:1px 46px;">析构的步骤是在函数体后隐式执行的，其行为取决于成员的类型：对于基础类型什么也不需要做，而类类型需要调用它自己的析构函数</li>
+    </ul>
+<li style="margin:1px 16px;">析构函数会在下述时机调用：</li>
+    <ul style="margin-top:0px;margin-bottom:0px;list-style-type:circle;line-height:30px;">
+    <li style="margin:1px 46px;">变量离开作用域时</li>
+    <li style="margin:1px 46px;">调用某对象的析构函数，销毁其对象成员时</li>
+    <li style="margin:1px 46px;">调用容器 (数组、标准库容器) 的析构函数，销毁其元素时</li>
+    <li style="margin:1px 46px;">对动态分配的指针对象调用 <cs>delete</cs> 运算符时；隐式销毁指针对象不会影响它指向的对象，而智能指针作为类对象，其成员会随着析构函数销毁</li>
+    <li style="margin:1px 46px;">创建临时对象的完整表达式结束时</li>
+    </ul>
+<li style="margin:1px 16px;">一个类若未定义析构函数，编译器会自动生成一个合成版本</li>
+    <div style="margin-left:46px;margin-top:-10px;">
+    <div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="n">Person</span> 
+<span class="p">{</span>
+    <span class="c1">// be equivalent to synthetic destructor</span>
+    <span class="o">~</span><span class="n">Person</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+    </div>
+</ul>
+
+<h3 id="_1">三 / 五法则</h3>
+<p>尽管 <cy>C++</cy> 不要求定义所有五种拷贝控制操作，但通常情况下，应将它们看成一个整体，只需要其中某个操作而忽略其他操作的情况十分少见。</p>
+<p><font color="#7b7b7b">①. 需要析构函数的类也需要拷贝和赋值</font></p>
+<p>通常情况下，对析构函数的需求比其他操作更为明显，如果析构函数被需要，几乎可以肯定它也需要拷贝构造函数和拷贝运算符。</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">HasPtr</span> 
+<span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="n">HasPtr</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">())</span> <span class="o">:</span> 
+        <span class="n">ps</span><span class="p">(</span><span class="k">new</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="n">s</span><span class="p">)),</span> <span class="n">i</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="n">HasPtr</span><span class="p">(</span><span class="k">const</span> <span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">hp</span><span class="p">)</span> <span class="o">:</span> <span class="n">ps</span><span class="p">(</span><span class="k">new</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="o">*</span><span class="n">hp</span><span class="p">.</span><span class="n">ps</span><span class="p">)),</span> <span class="n">i</span><span class="p">(</span><span class="n">hp</span><span class="p">.</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="o">~</span><span class="n">HasPtr</span><span class="p">()</span> <span class="p">{</span> <span class="k">delete</span> <span class="n">ps</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">private</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">*</span> <span class="n">ps</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">HasPtr</span> <span class="nf">test</span><span class="p">(</span><span class="n">HasPtr</span> <span class="n">hp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">HasPtr</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">hp</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">HasPtr</span> <span class="n">hp</span><span class="p">(</span><span class="s">&quot;values&quot;</span><span class="p">);</span>
+    <span class="n">HasPtr</span> <span class="n">r</span> <span class="o">=</span> <span class="n">test</span><span class="p">(</span><span class="n">hp</span><span class="p">);</span>
+    <span class="c1">// note: copy ctor is invoked 3 times</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+由于 <code><csg>HasPtr</csg></code> 使用了默认的拷贝构造函数，导致了多个 <code><csg>HasPtr</csg></code> 对象指向相同的内存。而拷贝返回值并离开作用域后调用了 <code><csg>hp</csg></code> 和 <code><csg>ret</csg></code> 的析构函数，多次销毁同一个指针是一个严重的错误，其行为是未定义的。<br>
+&emsp;正确的做法是手动实现深拷贝操作。</p>
+<p><font color="#7b7b7b">②. 需要拷贝操作的类也需要赋值操作，反之亦然</font></p>
+<p>某些类可能只需要拷贝和赋值操作，而不需要析构函数，由此引出了这条规则。<br>
+例如，如果某个类需要给每个对象分配一个独有的序号，那么需要拷贝构造函数生成独特的新序号，需要赋值操作避免序号的拷贝，不一定需要析构函数。</p>
 <p></font></p>
                 
               
