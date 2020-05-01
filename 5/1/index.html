@@ -324,8 +324,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2/2.2/" title="2.overload and others" class="md-nav__link">
-      2.overload and others
+    <a href="../../2/2.2/" title="2.overload and inline" class="md-nav__link">
+      2.overload and inline
     </a>
   </li>
 
@@ -558,8 +558,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    (2). 构造函数初始值列表
+  <a href="#2-initializer-list" class="md-nav__link">
+    (2). 构造函数初始值列表 (initializer list)
   </a>
   
 </li>
@@ -599,7 +599,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     (2). 值初始化
   </a>
   
@@ -630,8 +630,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../2/" title="2.class" class="md-nav__link">
-      2.class
+    <a href="../2/" title="2.members" class="md-nav__link">
+      2.members
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3/" title="3.copy control" class="md-nav__link">
+      3.copy control
     </a>
   </li>
 
@@ -680,8 +692,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    (2). 构造函数初始值列表
+  <a href="#2-initializer-list" class="md-nav__link">
+    (2). 构造函数初始值列表 (initializer list)
   </a>
   
 </li>
@@ -721,7 +733,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     (2). 值初始化
   </a>
   
@@ -760,22 +772,25 @@
                 <p><font class="generalcy"></p>
 <h3 id="1">1. 构造函数</h3>
 <h4 id="1_1">(1). 默认构造函数</h4>
-<p>&emsp;类通过默认构造函数执行默认初始化的过程，当一个类没有任何构造函数时，编译器会创建一个默认构造函数，它被称为合成的 (<cy>synthesized</cy>) 默认构造函数：<br>
-&emsp;① 如果存在类内值，则用类内值初始化；&ensp;②否则，执行相应成员的默认初始化。<br>
-当类中存在自定义的构造函数，且合成的默认构造函数也被需要时，需要显式声明：
+<p>&emsp;类通过默认构造函数执行默认初始化的过程，当一个类没有任何构造函数时，编译器会创建一个默认构造函数，它被称为合成的 (<cy>synthesized</cy>) 默认构造函数，其初始化行为：<br>
+&emsp;① 如果存在类内值，则用类内值初始化成员；<br>
+&emsp;② 否则，执行相应成员的默认初始化。<br>
+当类中存在自定义的构造函数，需要通过 <code><csg>= default</csg></code> 显式声明合成的默认构造函数：
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>   <span class="n">A</span><span class="p">()</span> <span class="o">=</span> <span class="k">default</span><span class="p">;</span>  <span class="p">}</span> 
 </code></pre></div>
 合成的默认构造函数只适用于非常简单的类，应尽可能自定义默认构造函数。</p>
-<h4 id="2">(2). 构造函数初始值列表</h4>
+<h4 id="2-initializer-list">(2). 构造函数初始值列表 (<cy>initializer list</cy>)</h4>
 <p>即通过如下形式初始化成员:
 <div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="o">&lt;</span><span class="n">params</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">:</span> <span class="n">member1</span><span class="p">(</span><span class="n">expr</span><span class="p">),</span> <span class="p">...</span> <span class="p">{</span> <span class="p">}</span> 
 </code></pre></div>
-类中的所有成员根据它们在类的定义中出现的顺序进行初始化，每个成员依次按照 构造列表 <csg>-&gt;</csg> 类内值 <csg>-&gt;</csg> 默认构造函数的顺序寻找初始化的机会。因此，构造函数初始值列表的必要性在于：
+类中的所有成员根据它们在类的定义中出现的顺序执行初始化，每个成员再依次按照 <br>
+&emsp;&emsp;<cy>intializer list</cy>&emsp; <csg>-&gt;</csg>&emsp; 类内值&emsp; <csg>-&gt;</csg>&emsp; 执行默认初始化<br>
+的顺序寻找初始化的机会。因此，构造函数初始值列表的必要性在于：
 <html> 
 <body>
 <ul style="margin-top:0px;margin-bottom:10px;line-height:30px;">
-<li style="margin:1px 26px;">是通过参数初始化 <cs>const</cs> 类型和引用类型的唯一机会；</li>
-<li style="margin:1px 26px;">一些类型会涉及初始化与赋值的底层效率问题。</li>
+<li style="margin:1px 26px;">在某些情况下，<cy>initializer list</cy> 是通过参数初始化 <cs>const</cs> 类型、引用类型、没有默认构造函数的类类型 的唯一机会；</li>
+<li style="margin:1px 26px;">对比于先默认初始化再在构造函数内赋值的方式，一些类型会涉及初始化与赋值的底层效率问题。</li>
 </ul>
 </body>
 </html></p>
@@ -831,7 +846,7 @@
 </ul>
 <a href="https://en.cppreference.com/w/cpp/language/default_initialization">details</a>
 <div style="margin-top:30px"></div></p>
-<h4 id="2_1">(2). 值初始化</h4>
+<h4 id="2">(2). 值初始化</h4>
 <p><csg><i>Syntax</i></csg>
 <div class="highlight"><pre><span></span><code><span class="n">T</span><span class="p">(),</span> <span class="n">T</span><span class="p">{},</span> <span class="n">T</span> <span class="n">obj</span><span class="p">(),</span> <span class="n">T</span> <span class="n">obj</span><span class="p">{}</span>                                             <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">new</span> <span class="n">T</span><span class="p">(),</span> <span class="k">new</span> <span class="n">T</span><span class="p">{},</span>                                                      <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -853,12 +868,13 @@
 <li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>class type</cy>，</li>
     <ul style="margin-top:0px;margin-bottom:0px;list-style-type:circle;line-height:30px;">
     <li style="margin:1px 26px;">若 <cy>T</cy> 没有默认构造函数 / 有用户提供的默认构造函数 / 有 <cy>deleted</cy> 构造函数，执行默认初始化</li>
-    <li style="margin:1px 26px;">若 <cy>T</cy> 的默认构造函数是隐式定义的 /  通过 <code><csg>= default</csg></code> 显式指明的，且如果这个构造函数是 <cy>trivial</cy> 的，执行零初始化；如果是 <cy>non-trivial</cy> 的，执行零初始化后还要执行默认初始化</li>
+    <li style="margin:1px 26px;">若 <cy>T</cy> 的默认构造函数是隐式定义的 /  通过 <code><csg>= default</csg></code> 显式指明的 (编译期生成)，且如果这个构造函数是 <cy>trivial</cy> 的，执行零初始化；如果是 <cy>non-trivial</cy> 的，执行零初始化后还要执行默认初始化</li>
     </ul>
 <li style="margin:1px 16px;">如果 <cy>T</cy> 是 <cy>array type</cy>，其中的每个元素都执行值初始化</li>
 <li style="margin:1px 16px;">其他情况下，执行零初始化</li>
 </ul>
-<a href="https://en.cppreference.com/w/cpp/language/value_initialization">details</a>
+<a href="https://en.cppreference.com/w/cpp/language/value_initialization">details</a><br>
+<a href="https://en.cppreference.com/w/cpp/language/default_constructor">trivial default constructor</a><br>
 <div style="margin-top:30px"></div></p>
 <h4 id="3_1">(3). 零初始化</h4>
 <p><csg><i>Syntax</i></csg>
@@ -915,13 +931,13 @@
           </a>
         
         
-          <a href="../2/" title="2.class" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../2/" title="2.members" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2.class
+                2.members
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
